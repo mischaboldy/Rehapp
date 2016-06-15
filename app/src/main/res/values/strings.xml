@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Rehapp</string>
+    <string name="toolbar_title">Rehapp</string>
 </resources>
