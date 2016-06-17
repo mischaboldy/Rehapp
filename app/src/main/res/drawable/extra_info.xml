@@ -3,5 +3,5 @@
     <item android:state_pressed="true"
         android:drawable="@drawable/extra_info_pressed" />
     <item  android:state_focused="false"
-        android:drawable="@drawable/extra_info_base2" />
+        android:drawable="@drawable/extra_info_base" />
 </selector>

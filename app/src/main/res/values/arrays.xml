@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="intensity_type_spinner">
+        <item>pre-training</item>
+        <item>duurtraining</item>
+        <item>intervaltraining</item>
+        <item>gewichtsreductietraining</item>
+    </string-array>
+
+    <string-array name="intensity_amount_spinner">
+        <item>laag</item>
+        <item>middel</item>
+        <item>hoog</item>
+    </string-array>
+
+    <string-array name="training_amount_spinner">
+        <item>1 keer per week</item>
+        <item>2 keer per week</item>
+        <item>3 keer per week</item>
+        <item>4 keer per week</item>
+        <item>5 keer per week</item>
+        <item>6 keer per week</item>
+        <item>7 keer per week</item>
+    </string-array>
+</resources>

@@ -1,5 +1,6 @@
 package com.mischaboldy.mischa.rehapp;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,8 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.File;
 
 public class MainMenu extends AppCompatActivity {
 
@@ -51,8 +54,8 @@ public class MainMenu extends AppCompatActivity {
     }
 
     public void open_my_training(View view) {
-        Toast.makeText(this, "open my training",
-                Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this, MyTraining.class);
+        startActivity(intent);
     }
 
     public void open_settings(View view) {

@@ -29,8 +29,8 @@
         -->
     </style>
 
-    <style name="my_toolbar" >
-        <item name="android:background">@drawable/blue_gradient</item>
+    <style name="my_toolbar">
+        <item name="android:background">@drawable/blue_gradient_horizontal</item>
         <item name="android:minHeight">?attr/actionBarSize</item>
         <item name="android:textColorPrimary">?attr/colorAccent</item>
         <item name="android:textColorSecondary">@android:color/white</item>
