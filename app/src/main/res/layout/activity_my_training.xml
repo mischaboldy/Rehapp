@@ -3,14 +3,17 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <include
         layout="@layout/toolbar_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
     <fragment
         android:id="@+id/schedule_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
     <fragment
         android:id="@+id/training_fragment"
         android:layout_width="match_parent"

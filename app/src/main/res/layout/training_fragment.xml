@@ -16,12 +16,8 @@
         android:id="@+id/select_training_type_textview"
         android:text="@string/select_training_type_text"
         android:textAlignment="center"
-        android:padding="8dp"
         android:textSize="15sp"
-        android:textColor="@color/white"
-        android:minHeight="35dp"
-        android:background="@drawable/blue_gradient_vertical"
-        android:layout_marginTop="10dp"
+        android:textColor="@color/blueTop"
         android:layout_gravity="center_horizontal" />
 
     <LinearLayout
@@ -31,35 +27,35 @@
         android:layout_weight="1"
         android:weightSum="3">
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:id="@+id/cycle_button"
-        android:button="@null"
-        android:background="@drawable/cycle"
-        android:layout_weight="1"
-        android:layout_gravity="center_vertical" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:id="@+id/cycle_button"
+            android:button="@null"
+            android:background="@drawable/cycle"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:id="@+id/walk_button"
-        android:button="@null"
-        android:background="@drawable/walk"
-        android:layout_weight="1"
-        android:layout_gravity="center_vertical" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:id="@+id/walk_button"
+            android:button="@null"
+            android:background="@drawable/walk"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:id="@+id/cardio_button"
-        android:button="@null"
-        android:background="@drawable/cardio"
-        android:layout_weight="1"
-        android:layout_gravity="center_vertical" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:id="@+id/cardio_button"
+            android:button="@null"
+            android:background="@drawable/cardio"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical" />
 
     </LinearLayout>
 
@@ -109,12 +105,8 @@
         android:id="@+id/select_training_intensity_textview"
         android:text="@string/select_training_intensity_text"
         android:textAlignment="center"
-        android:padding="8dp"
         android:textSize="15sp"
-        android:textColor="@color/white"
-        android:minHeight="35dp"
-        android:background="@drawable/blue_gradient_vertical"
-        android:layout_marginTop="10dp"
+        android:textColor="@color/blueTop"
         android:layout_gravity="center_horizontal" />
 
     <LinearLayout
@@ -151,22 +143,19 @@
         android:id="@+id/select_training_amount_textview"
         android:text="@string/select_training_amount_text"
         android:textAlignment="center"
-        android:padding="8dp"
         android:textSize="15sp"
-        android:textColor="@color/white"
-        android:minHeight="35dp"
-        android:background="@drawable/blue_gradient_vertical"
-        android:layout_marginTop="10dp"
+        android:textColor="@color/blueTop"
         android:layout_gravity="center_horizontal" />
 
     <Spinner
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/training_amount_spinner"
-        android:layout_gravity="center_horizontal"
-        android:entries="@array/training_amount_spinner"/>
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/training_amount_spinner"
+    android:layout_gravity="center_horizontal"
+    android:textAlignment="center"
+    android:entries="@array/training_amount_spinner"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -175,12 +164,12 @@
         android:gravity="center|bottom"
         android:orientation="vertical" >
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textAlignment="center"
-            android:text="@string/save_training_button_text"
-            android:onClick="save_training"/>
+        <ImageButton
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/save_training_button"
+        android:layout_marginBottom="20dp"
+        android:onClick="save_training" />
     </LinearLayout>
+
 </LinearLayout>

@@ -2,15 +2,27 @@
     <string name="app_name">Rehapp</string>
     <string name="toolbar_title">Rehapp</string>
     <string name="title_activity_my_training">MyTraining</string>
+    <string name="title_activity_my_training_schedule">MyTrainingSchedule</string>
+    <string name="title_input_workout">Workout toevoegen</string>
+
+
     <string name="select_training_type_text">Selecteer minimaal een trainingstype:</string>
     <string name="select_training_intensity_text">Kies uw trainingsintensiteit:</string>
     <string name="select_training_amount_text">Kies het aantal trainingen per week:</string>
     <string name="save_training_button_text">Training opslaan</string>
-    <string name="title_activity_my_training_schedule">MyTrainingSchedule</string>
-    <string name="hello_round">Hello Round World!</string>
-    <string name="hello_square">Hello Square World!</string>
     <string name="update_training_button_text">Training aanpassen</string>
     <string name="delete_training_button_text">training verwijderen</string>
+
     <string name="agenda_button_text">Agenda bekijken</string>
-    <string name="input_workout_button">Workout toevoegen</string>
+
+    <string name="input_workout_button_text">Workout toevoegen</string>
+    <string name="save_workout_button_text">Workout opslaan</string>
+    <string name="select_workout_duration_text">Hoe lang heeft u getraind?</string>
+    <string name="select_workout_training_text">Wat voor training heeft u gedaan?</string>
+    <string name="select_borgschale_text">Wat was de belasting op de Borgschaal?</string>
+    <string name="workout_row_text">Trainingsduur: \nBorgscore: \nDatum: </string>
+    <string name="title_profile_form_text_view">Profiel formulier</string>
+    <string name="name_input_text">Naam</string>
+    <string name="save_profile_button_text">Profiel opslaan</string>
+
 </resources>
