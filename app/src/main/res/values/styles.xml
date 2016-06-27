@@ -29,6 +29,7 @@
         -->
     </style>
 
+
     <style name="my_toolbar">
         <item name="android:background">@drawable/blue_gradient_horizontal</item>
         <item name="android:minHeight">?attr/actionBarSize</item>

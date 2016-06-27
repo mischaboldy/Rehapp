@@ -59,11 +59,11 @@ public class TrainingOptions {
                 results[0] = "40%";
                 results[2] ="8";
                 break;
-            case "gewichtsreductietrainingtraining middel":
+            case "gewichtsreductietraining middel":
                 results[0] = "50%";
                 results[2] ="8";
                 break;
-            case "gewichtsreductietrainingtraining hoog":
+            case "gewichtsreductietraining hoog":
                 results[0] = "60%";
                 results[2] ="8";
                 break;

@@ -27,10 +27,20 @@
             android:name=".InputWorkout"
             android:label="@string/title_input_workout"
             android:parentActivityName=".MyTraining"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme"
+            android:noHistory="true">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mischaboldy.mischa.rehapp.MyTraining" />
+        </activity>
+        <activity
+            android:name=".MyProfile"
+            android:label="@string/title_input_workout"
+            android:parentActivityName=".MainMenu"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mischaboldy.mischa.rehapp.MainMenu" />
         </activity>
     </application>
 

@@ -10,8 +10,6 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.File;
-
 public class MainMenu extends AppCompatActivity {
 
     @Override
@@ -39,8 +37,8 @@ public class MainMenu extends AppCompatActivity {
 
 
     public void open_my_profile(View view) {
-        Toast.makeText(this, "open my profile",
-                Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this, MyProfile.class);
+        startActivity(intent);
     }
 
     public void open_my_medals(View view) {

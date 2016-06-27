@@ -33,7 +33,18 @@
         <item>1uur &amp; 30 minuten</item>
         <item>1uur &amp; 45 minuten</item>
         <item>1uur &amp; 60 minuten</item>
+    </string-array>
 
+
+    <string-array name="test_type_spinner">
+        <item>Fietstest</item>
+        <item>6 Minuten wandeltest</item>
+        <item>Shuttle wandeltest</item>
+    </string-array>
+
+    <string-array name="sex_spinner">
+        <item>man</item>
+        <item>vrouw</item>
     </string-array>
 
     <integer-array name="workout_duration_spinner_values">
