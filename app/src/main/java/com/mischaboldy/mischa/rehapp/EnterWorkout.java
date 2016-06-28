@@ -22,9 +22,9 @@ import java.io.File;
 /**
  * Created by mischa on 23/06/16.
  */
-public class InputWorkout extends AppCompatActivity {
+public class EnterWorkout extends AppCompatActivity {
 
-    SQLiteDatabase workoutDB = null;
+    SQLiteDatabase rehappDB = null;
     String selectedWorkout;
     Integer borgValue = 6;
 
@@ -40,10 +40,7 @@ public class InputWorkout extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         TextView appTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
-        appTitle.setText("Workout toevoegen");
-
-        Typeface titleTypeFace = Typeface.createFromAsset(getAssets(), "fonts/KeepCalm-Medium.ttf");
-        appTitle.setTypeface(titleTypeFace);
+        appTitle.setText(R.string.input_workout_title);
 
         Button saveWorkoutButton = (Button)findViewById(R.id.save_workout_button);
         saveWorkoutButton.setClickable(false);
@@ -138,7 +135,7 @@ public class InputWorkout extends AppCompatActivity {
 
     public void save_workout(View view) {
 
-        workoutDB = this.openOrCreateDatabase("WorkoutDatabase.sqlite", MODE_PRIVATE, null);
+        rehappDB = this.openOrCreateDatabase("RehappDatabase.sqlite", MODE_PRIVATE, null);
 
         String workout_type = selectedWorkout;
         Spinner workoutDurationSpinner = (Spinner) findViewById(R.id.workout_duration_spinner);
@@ -146,7 +143,7 @@ public class InputWorkout extends AppCompatActivity {
         Integer workout_duration = getResources().getIntArray(R.array.workout_duration_spinner_values)
                 [workoutDurationSpinner.getSelectedItemPosition()];
 
-        workoutDB.execSQL("INSERT INTO workouts (workout, duration, borgvalue) VALUES ('" + workout_type + "', '" +
+        rehappDB.execSQL("INSERT INTO workouts (workout, duration, borgvalue) VALUES ('" + workout_type + "', '" +
                 workout_duration + "', '" + borgValue +"');");
 
         Intent intent = new Intent(this, MyTraining.class);

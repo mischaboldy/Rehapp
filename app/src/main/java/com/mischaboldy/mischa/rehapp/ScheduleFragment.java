@@ -27,7 +27,7 @@ public class ScheduleFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View view =  inflater.inflate(R.layout.schedule_fragment, container, false);
+        final View view =  inflater.inflate(R.layout.fragment_schedule, container, false);
         SharedPreferences trainingPreferences = getActivity().getSharedPreferences(PREFS_NAME, 0);
 
         Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
@@ -78,9 +78,9 @@ public class ScheduleFragment extends Fragment {
 
         ArrayList<String> workouts = new ArrayList<String>();
 
-        SQLiteDatabase workoutDB = getActivity().openOrCreateDatabase("WorkoutDatabase.sqlite", getActivity().MODE_PRIVATE, null);
+        SQLiteDatabase rehappDB = getActivity().openOrCreateDatabase("RehappDatabase.sqlite", getActivity().MODE_PRIVATE, null);
 
-        Cursor cursor = workoutDB.rawQuery("SELECT * FROM workouts", null);
+        Cursor cursor = rehappDB.rawQuery("SELECT * FROM workouts", null);
 
         int idColumn = cursor.getColumnIndex("id");
         int workoutColumn = cursor.getColumnIndex("workout");

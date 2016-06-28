@@ -84,8 +84,8 @@ public class workoutListViewAdapter extends ArrayAdapter<String> {
     }
 
     private void removeWorkout(int id) {
-        SQLiteDatabase workoutDB = mContext.openOrCreateDatabase("WorkoutDatabase.sqlite", mContext.MODE_PRIVATE, null);
-        workoutDB.execSQL("DELETE FROM workouts WHERE id = " + id + ";");
+        SQLiteDatabase rehappDB = mContext.openOrCreateDatabase("RehappDatabase.sqlite", mContext.MODE_PRIVATE, null);
+        rehappDB.execSQL("DELETE FROM workouts WHERE id = " + id + ";");
     }
 
 

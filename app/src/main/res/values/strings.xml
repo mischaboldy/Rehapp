@@ -43,5 +43,14 @@
     <string name="shuttle_edit_text">Shuttle wandeltest (level)</string>
     <string name="six_minute_edit_text">6 Minuten wandeltest (m)</string>
     <string name="walk_test_title">Looptest:</string>
+    <string name="input_workout_title">Workout toevoegen</string>
+    <string name="show_progress_title">Voortgang</string>
+    <string name="input_training_title">Trainingsgegevens invoeren</string>
+    <string name="max_watt_edit_text">Maximale wattage (w)</string>
+    <string name="vo2max_edit_text">VO2max</string>
+    <string name="MET_edit_text">MET\'s</string>
+    <string name="speed_edit_text">Snelheid</string>
+    <string name="shuttle_level_edit_text">Level</string>
+    <string name="six_minute_meter_edit_text">Meter</string>
 
 </resources>

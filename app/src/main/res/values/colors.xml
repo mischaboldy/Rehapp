@@ -7,6 +7,13 @@
     <color name="blueBottom">#80004FA2</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+
+    <color name="purple">#E708F7</color>
+    <color name="red">#ED1C24</color>
+    <color name="green">#5BF708</color>
+    <color name="yellow">#F7EF08</color>
+    <color name="blue">#1B08F7</color>
+
     <color name="cursorAccent">#ED1C24</color>
     <color name="controlNormal">#ED1C24</color>
     <color name="controlActivated">#ED1C24</color>

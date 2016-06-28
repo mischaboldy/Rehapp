@@ -27,6 +27,24 @@
             android:layout_height="wrap_content"
             android:text="update"
             android:onClick="updateProfile"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="invoeren trainingsgegevens"
+            android:onClick="input_training_info"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="invoeren testgegevens"
+            android:onClick="input_test_info"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="voortgang tonen"
+            android:onClick="showProgress"/>
     </LinearLayout>
 
 </LinearLayout>

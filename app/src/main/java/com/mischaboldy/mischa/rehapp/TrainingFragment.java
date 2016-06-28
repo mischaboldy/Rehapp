@@ -23,7 +23,7 @@ public class TrainingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View view =  inflater.inflate(R.layout.training_fragment, container, false);
+        final View view =  inflater.inflate(R.layout.fragment_training, container, false);
         SharedPreferences trainingPreferences = getActivity().getSharedPreferences(PREFS_NAME, 0);
 
         Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);

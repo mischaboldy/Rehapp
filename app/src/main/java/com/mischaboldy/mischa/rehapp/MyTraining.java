@@ -18,13 +18,12 @@ public class MyTraining extends AppCompatActivity {
 
     public static final String PREFS_NAME = "TrainingPrefsFile";
     boolean trainingSaved;
-    SQLiteDatabase workoutDB = null;
+    SQLiteDatabase rehappDB = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         SharedPreferences trainingPreferences = getSharedPreferences(PREFS_NAME, 0);
-        createDatabase();
 
         if (trainingPreferences != null){
             trainingSaved= trainingPreferences.getBoolean("trainingSaved", false);
@@ -91,12 +90,12 @@ public class MyTraining extends AppCompatActivity {
     }
 
     public void input_workout(View view) {
-        Intent intent = new Intent(this, InputWorkout.class);
+        Intent intent = new Intent(this, EnterWorkout.class);
         startActivity(intent);
     }
 
     public void view_agenda(View view) {
-        Intent intent = new Intent(this, InputWorkout.class);
+        Intent intent = new Intent(this, EnterWorkout.class);
         startActivity(intent);
     }
 
@@ -113,19 +112,5 @@ public class MyTraining extends AppCompatActivity {
         }
 
         fragmentTransaction.commit();
-    }
-
-    public void createDatabase() {
-        try{
-
-            workoutDB = this.openOrCreateDatabase("WorkoutDatabase.sqlite", MODE_PRIVATE, null);
-
-            workoutDB.execSQL("CREATE TABLE IF NOT EXISTS workouts " +
-                    "(id integer primary key, workout VARCHAR, duration integer, borgvalue integer, " +
-                    "dt datetime default current_timestamp)");
-        }
-        catch (Exception e){
-            Log.e("CONTACTS ERROR", "Error creating database");
-        }
     }
 }
