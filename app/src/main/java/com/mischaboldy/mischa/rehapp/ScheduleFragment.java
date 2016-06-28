@@ -1,16 +1,16 @@
 package com.mischaboldy.mischa.rehapp;
 
 import android.app.Fragment;
+import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -22,58 +22,23 @@ import java.util.ArrayList;
  */
 public class ScheduleFragment extends Fragment {
 
-    String title;
-    String intensity;
-    String rest;
-    String trainingAmount;
-    String numberOfWorkouts;
-    ArrayList<String> workouts;
-
-    public static ScheduleFragment newInstance(String title, String intensity, String rest,
-                                               String trainingAmount, String numberOfWorkouts,
-                                               ArrayList<String> workouts) {
-
-        ScheduleFragment scheduleFragment = new ScheduleFragment();
-        Bundle args = new Bundle();
-
-        args.putString("title", title);
-        args.putString("intensity", intensity);
-        args.putString("rest", rest);
-        args.putString("trainingAmount", trainingAmount);
-        args.putString("numberOfWorkouts", numberOfWorkouts);
-        args.putStringArrayList("workouts", workouts);
-
-        scheduleFragment.setArguments(args);
-        return scheduleFragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // Get back arguments
-        title= getArguments().getString("title", "pre-training laag");
-        intensity= getArguments().getString("intensity", "50%");
-        rest= getArguments().getString("rest", "");
-        trainingAmount= getArguments().getString("trainingAmount", "2");
-        numberOfWorkouts= getArguments().getString("numberOfWorkouts", "2 keer per week");
-        workouts= getArguments().getStringArrayList("workouts");
-    }
+    public static final String PREFS_NAME = "TrainingPrefsFile";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View view =  inflater.inflate(R.layout.schedule_fragment, container, false);
+        SharedPreferences trainingPreferences = getActivity().getSharedPreferences(PREFS_NAME, 0);
 
         Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
 
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
-
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         TextView appTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
-        appTitle.setText("Mijn training");
+        appTitle.setText(R.string.my_training_title);
 
         Typeface titleTypeFace = Typeface.createFromAsset(getActivity().getAssets(), "fonts/KeepCalm-Medium.ttf");
         appTitle.setTypeface(titleTypeFace);
@@ -84,10 +49,19 @@ public class ScheduleFragment extends Fragment {
         TextView training_amount_textview = (TextView) view.findViewById(R.id.training_amount_textview);
         TextView number_of_workouts_textview = (TextView) view.findViewById(R.id.number_of_workouts_textview);
 
+        String intensityType = trainingPreferences.getString("intensityType", "pre-training");
+        String intensityAmount = trainingPreferences.getString("intensityAmount", "laag");
+        String numberOfWorkouts = trainingPreferences.getString("numberOfWorkouts", "1 keer per week");
+        String title = intensityType + " " + intensityAmount;
+        String[] results = new String[3];
+        results = TrainingOptions.getProgram(title);
+
+        ArrayList<String> workouts = getWorkouts();
+
         training_title_textview.setText(title);
-        training_intensity_textview.setText(intensity + " VO2max");
-        training_rest_textview.setText(rest);
-        training_amount_textview.setText(trainingAmount + " weeks trainingsprogramma");
+        training_intensity_textview.setText(results[0] + " VO2max");
+        training_rest_textview.setText(results[1]);
+        training_amount_textview.setText(results[2] + " weeks trainingsprogramma");
         number_of_workouts_textview.setText(numberOfWorkouts);
 
         ListAdapter listAdapter = new workoutListViewAdapter(getActivity().getApplicationContext()
@@ -98,6 +72,41 @@ public class ScheduleFragment extends Fragment {
         listView.setAdapter(listAdapter);
 
         return view;
+    }
+
+    public ArrayList<String> getWorkouts() {
+
+        ArrayList<String> workouts = new ArrayList<String>();
+
+        SQLiteDatabase workoutDB = getActivity().openOrCreateDatabase("WorkoutDatabase.sqlite", getActivity().MODE_PRIVATE, null);
+
+        Cursor cursor = workoutDB.rawQuery("SELECT * FROM workouts", null);
+
+        int idColumn = cursor.getColumnIndex("id");
+        int workoutColumn = cursor.getColumnIndex("workout");
+        int durationColumn = cursor.getColumnIndex("duration");
+        int borgValueColumn = cursor.getColumnIndex("borgvalue");
+        int dtColumn = cursor.getColumnIndex("dt");
+
+        cursor.moveToFirst();
+
+
+        if (cursor != null && (cursor.getCount() > 0)) {
+
+            do {
+
+                String id = cursor.getString(idColumn);
+                String workout = cursor.getString(workoutColumn);
+                String duration = cursor.getString(durationColumn);
+                String borgValue = cursor.getString(borgValueColumn);
+                String dt = cursor.getString(dtColumn);
+
+                workouts.add(id + ":" + workout + ":" + duration + ":" + borgValue + ":" + dt);
+
+            } while (cursor.moveToNext());
+
+        }
+        return workouts;
     }
 
 }

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/title_profile_form_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/title_test_info_form_text_view"
+            android:textColor="@color/blueTop"
+            android:textSize="40sp" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/test_type_spinner"
+            android:entries="@array/test_type_spinner"/>
+
+        <!---->
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/cycle_test_title"-->
+            <!--android:textSize="20sp"-->
+            <!--android:textColor="@color/blueTop"/>-->
+
+        <!--<EditText-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:backgroundTint="@color/colorPrimaryDark"-->
+            <!--android:hint="@string/cycle_test_edit_text"-->
+            <!--android:id="@+id/cycle_test_input_edit_text"-->
+            <!--android:inputType="number" />-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/walk_test_title"-->
+            <!--android:textSize="20sp"-->
+            <!--android:textColor="@color/blueTop"/>-->
+
+        <!--<EditText-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:backgroundTint="@color/colorPrimaryDark"-->
+            <!--android:hint="@string/six_minute_edit_text"-->
+            <!--android:id="@+id/six_minute_edit_text"-->
+            <!--android:inputType="number" />-->
+
+        <!--<EditText-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:backgroundTint="@color/colorPrimaryDark"-->
+            <!--android:hint="@string/blood_pressure_res_edit_text"-->
+            <!--android:id="@+id/blood_pressure_rest_input_edit_text"-->
+            <!--android:inputType="number" />-->
+
+        <!--<EditText-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:backgroundTint="@color/colorPrimaryDark"-->
+            <!--android:hint="@string/shuttle_edit_text"-->
+            <!--android:id="@+id/shuttle_input_edit_text"-->
+            <!--android:inputType="number" />-->
+
+        <!--<EditText-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:backgroundTint="@color/colorPrimaryDark"-->
+            <!--android:hint="@string/MET_edit_text"-->
+            <!--android:id="@+id/MET_input_edit_text"-->
+            <!--android:inputType="numberDecimal" />-->
+
+        <!--<EditText-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:backgroundTint="@color/colorPrimaryDark"-->
+            <!--android:hint="@string/vo2max_edit_text"-->
+            <!--android:id="@+id/vo2max_edit_text"-->
+            <!--android:inputType="number" />-->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/blueTop"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="70dp"
+            android:paddingRight="70dp"
+            android:text="@string/save_trainings_info_button_text"
+            android:onClick="saveProfile"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+</LinearLayout>

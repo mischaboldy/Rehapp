@@ -7,8 +7,7 @@ import java.lang.reflect.Array;
  */
 public class TrainingOptions {
 
-
-    public static String[] getProgramme(String trainingChoices) {
+    public static String[] getProgram(String trainingChoices) {
 
         String[] results = new String[3];
 
