@@ -26,6 +26,7 @@
     <string name="save_profile_button_text">Profiel opslaan</string>
     <string name="my_profile_title">Mijn profiel</string>
     <string name="my_training_title">Mijn training</string>
+    <string name="my_medals_title">Mijn medailles</string>
     <string name="date_of_birth_edit_text">Geboorte datum</string>
     <string name="weight_edit_text">Gewicht (kg)</string>
     <string name="height_edit_text">Lengte (m)</string>
@@ -52,5 +53,92 @@
     <string name="speed_edit_text">Snelheid</string>
     <string name="shuttle_level_edit_text">Level</string>
     <string name="six_minute_meter_edit_text">Meter</string>
+    <string name="settings_title">Instellingen</string>
+    <string name="help_title">Help</string>
+    <string name="info_title">Extra informatie</string>
+    <string name="see_medal">Medaille tonen</string>
+    <string name="question1">Hoe werkt de app?</string>
+    <string name="question2">Wat kan ik doen met de app?</string>
+    <string name="question3">Wat moet ik doen als iets niet begrijp?</string>
+    <string name="question4">Wat moet ik doen als ik iets verkeerd heb ingevoerd?</string>
+    <string name="question5">wat ?</string>
+    <string name="answer1">In deze app kan u verschillende gegevens bijhouden. In het profiel gedeelte kan u test- en trainingsgegevens invoeren.
+    </string>
+    <string name="answer2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="answer3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="answer4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="answer5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="try_again_toast_text">Op dit moment is helaas niemand bereikbaar, probeert u het later nog eens</string>
 
+    <string name="app_introduction_title">Welkom bij Rehapp</string>
+    <string name="app_introduction">Rehapp is een app die u helpt bij het revalideren. Met deze app kan u verschillende dingen doen. </string>
+
+    <string name="introduction_header">Introductie</string>
+    <string name="disclaimer_header">Disclaimer</string>
+    <string name="general_header">Algemeen</string>
+    <string name="financial_header">Financiele aspecten</string>
+    <string name="copyright_header">Copyright en intellectueel eigendom</string>
+    <string name="news_header">Nieuws</string>
+
+    <string name="introduction">
+        Deze applicatie is gemaakt voor patiënten met een chronische
+        ziekte, fysiotherapeuten, bewegingsagogen, sportleiders in de zorg
+        en geeft informatie over E-training mogelijkheden bij volwassenen. \n
+
+        Deze applicatie fungeert niet als protocol, dus kunnen hieraan geen
+        rechten ontleend worden. (zie ook de disclaimer) \n
+        De tekst is zorgvuldig samengesteld en het is de bedoeling dat er
+        regelmatig updates verschijnen als er nieuwe ontwikkelingen in de
+        training en/of in de literatuur zijn.
+
+        Voor de samenstelling van deze applicatie is gebruikt gemaakt van
+        verschillende bronnen met uiteenlopende levels of evidence. \n\n
+
+        Uitsluiting van aansprakelijkheid \n
+        Alle informatie in deze applicatie is bedoeld voor persoonlijk
+        gebruik. Aan de informatie kunnen geen rechten worden ontleend.
+        Wijzigingen en typefouten worden voorbehouden. Wij spannen ons
+        in om de informatie op deze webpagina zo volledig en nauwkeurig
+        mogelijk te laten zijn. \n
+        NAAM aanvaardt geen enkele verantwoordelijkheid voor schade op
+        welke manier dan ook ontstaan door gebruik, onvolledigheid of
+        onjuistheid van de aangeboden informatie in deze applicatie</string>
+    <string name="disclaimer">Geen enkele informatie verstrekt door deze applicatie zal enige
+vorm van garantie geven. NAAM is niet aansprakelijk voor
+ongewenste uitkomsten of effecten voortvloeiend uit de toegepaste
+training. Daarnaast garandeert NAAM geen enkel resultaat bij het
+implementeren van de in deze applicatie voorgestelde training.
+NAAM kan niet aansprakelijk gesteld worden voor schade.
+Link Disclaimer
+Links zijn toegepast als informatieve bronnen. De meeste links zijn
+externe links en worden derhalve niet onderhouden door NAAM.
+Deze links worden enkel aangeboden als extra service in de
+applicatie. De inhoud van de gelinkte sites valt buiten de
+verantwoordelijkheid van NAAM.</string>
+    <string name="general">Gebruikers verantwoordelijkheden
+De informatie in deze applicatie kan niet gebruikt worden ter
+formulering van een diagnose of behandeling, of voor het
+beargumenteren om medicatie te starten dan wel te stoppen,
+zonder tussenkomst van een arts. De in deze applicatie
+voorgestelde training kan nooit een vervanging zijn van een
+revalidatie dan wel een onderzoek of diagnose door een arts. De
+gebruiker is bewust van het feit dat de informatie in deze applicatie
+niet compleet kan zijn.
+Fouten en Veranderingen
+De inhoud van de applicatie kan technische onjuistheden of
+tikfouten bevatten. Dientengevolge is NAAM niet aansprakelijk in
+geval van fouten in de tekst, foto\'s of illustraties. Daarnaast kan
+zonder melding de inhoud gewijzigd worden.</string>
+    <string name="financial">De inhoud van deze applicatie is volledig onafhankelijk
+samengesteld, zonder tussenkomst van een commercieel bedrijf.
+De realisatie van de applicatie en het gratis aan de gebruiker
+kunnen aanbieden is financieel mogelijk gemaakt door Naam.</string>
+    <string name="copyright">Copyright is van toepassing op alle tekst, illustraties en foto’s in
+deze applicatie. Copyright is ook van toepassing op het concept
+van het training als toepassing voor de E-training. Het auteursrecht
+op deze applicatie berust bij NAAM of bij derden welke met
+toestemming dit (beeld)materiaal beschikbaar hebben gesteld aan
+NAAM. Vermenigvuldiging in wat voor vorm dan ook is alleen
+toegestaan na voorafgaande toestemming door NAAM</string>
+    <string name="news">Op dit moment is er geen nieuws beschikbaar</string>
 </resources>

@@ -1,8 +1,7 @@
-package com.mischaboldy.mischa.rehapp;
+package com.mischaboldy.mischa.rehapp.Fragments;
 
 import android.app.Fragment;
 import android.content.SharedPreferences;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -12,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.mischaboldy.mischa.rehapp.R;
 
 /**
  * Created by mischa on 23/06/16.
@@ -35,9 +36,6 @@ public class TrainingFragment extends Fragment {
 
         TextView appTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
         appTitle.setText(R.string.my_training_title);
-
-        Typeface titleTypeFace = Typeface.createFromAsset(getActivity().getAssets(), "fonts/KeepCalm-Medium.ttf");
-        appTitle.setTypeface(titleTypeFace);
 
         CheckBox cycle = (CheckBox) view.findViewById(R.id.cycle_button);
         CheckBox walk = (CheckBox) view.findViewById(R.id.walk_button);

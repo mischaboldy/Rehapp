@@ -1,4 +1,4 @@
-package com.mischaboldy.mischa.rehapp;
+package com.mischaboldy.mischa.rehapp.Activities;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -18,6 +18,8 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+import com.mischaboldy.mischa.rehapp.R;
+import com.mischaboldy.mischa.rehapp.SampleFragmentPagerAdapter;
 
 import java.util.ArrayList;
 

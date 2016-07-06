@@ -1,10 +1,9 @@
-package com.mischaboldy.mischa.rehapp;
+package com.mischaboldy.mischa.rehapp.Fragments;
 
 import android.app.Fragment;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -14,6 +13,10 @@ import android.view.ViewGroup;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.mischaboldy.mischa.rehapp.R;
+import com.mischaboldy.mischa.rehapp.TrainingOptions;
+import com.mischaboldy.mischa.rehapp.ListViewAdapters.WorkoutListViewAdapter;
 
 import java.util.ArrayList;
 
@@ -40,9 +43,6 @@ public class ScheduleFragment extends Fragment {
         TextView appTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
         appTitle.setText(R.string.my_training_title);
 
-        Typeface titleTypeFace = Typeface.createFromAsset(getActivity().getAssets(), "fonts/KeepCalm-Medium.ttf");
-        appTitle.setTypeface(titleTypeFace);
-
         TextView training_title_textview = (TextView) view.findViewById(R.id.training_title_textview);
         TextView training_intensity_textview = (TextView) view.findViewById(R.id.training_intensity_textview);
         TextView training_rest_textview = (TextView) view.findViewById(R.id.training_rest_textview);
@@ -64,7 +64,7 @@ public class ScheduleFragment extends Fragment {
         training_amount_textview.setText(results[2] + " weeks trainingsprogramma");
         number_of_workouts_textview.setText(numberOfWorkouts);
 
-        ListAdapter listAdapter = new workoutListViewAdapter(getActivity().getApplicationContext()
+        ListAdapter listAdapter = new WorkoutListViewAdapter(getActivity().getApplicationContext()
                 , workouts);
 
         ListView listView = (ListView) view.findViewById(R.id.workout_list_view);

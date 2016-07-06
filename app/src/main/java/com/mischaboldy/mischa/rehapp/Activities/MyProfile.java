@@ -1,4 +1,4 @@
-package com.mischaboldy.mischa.rehapp;
+package com.mischaboldy.mischa.rehapp.Activities;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -14,6 +14,13 @@ import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.mischaboldy.mischa.rehapp.AchievementTracker;
+import com.mischaboldy.mischa.rehapp.R;
+import com.mischaboldy.mischa.rehapp.Fragments.EnterProfileFragment;
+import com.mischaboldy.mischa.rehapp.Fragments.EnterTestFragment;
+import com.mischaboldy.mischa.rehapp.Fragments.EnterTrainingFragment;
+import com.mischaboldy.mischa.rehapp.Fragments.ShowProfileFragment;
 
 /**
  * Created by mischa on 27/06/16.
@@ -159,6 +166,7 @@ public class MyProfile extends AppCompatActivity {
             }
 
             Toast.makeText(this, "Trainingsgegevens opgeslagen", Toast.LENGTH_LONG).show();
+            AchievementTracker.trackAchievement(this, "training");
 
             setFragment("showProfile");
         }
@@ -247,6 +255,7 @@ public class MyProfile extends AppCompatActivity {
         }
 
         Toast.makeText(this, "Testgegevens opgeslagen", Toast.LENGTH_LONG).show();
+        AchievementTracker.trackAchievement(this, "test");
 
         setFragment("showProfile");
     }

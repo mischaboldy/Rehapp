@@ -1,4 +1,4 @@
-package com.mischaboldy.mischa.rehapp;
+package com.mischaboldy.mischa.rehapp.Fragments;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.mischaboldy.mischa.rehapp.R;
 
 /**
  * Created by mischa on 28/06/16.

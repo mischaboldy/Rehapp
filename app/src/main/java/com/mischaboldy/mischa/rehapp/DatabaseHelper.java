@@ -44,8 +44,6 @@ public class DatabaseHelper {
     public static void createDatabase(Context context){
         try{
 
-//            rehappDB = context.openOrCreateDatabase("RehappDatabase.sqlite", context.MODE_PRIVATE, null);
-
             rehappDB.execSQL("CREATE TABLE IF NOT EXISTS training " +
                     "(id integer primary key, heart_fq_rest integer, heart_fq_max integer," +
                     "blood_pressure_rest integer, blood_pressure_max integer, " +
@@ -59,6 +57,7 @@ public class DatabaseHelper {
             rehappDB.execSQL("CREATE TABLE IF NOT EXISTS workouts " +
                     "(id integer primary key, workout VARCHAR, duration integer, borgvalue integer, " +
                     "dt datetime default current_timestamp)");
+
         }
         catch (Exception e){
             Log.e("CONTACTS ERROR", "Error creating database");

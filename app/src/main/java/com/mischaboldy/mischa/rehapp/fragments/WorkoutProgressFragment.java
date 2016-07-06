@@ -1,4 +1,4 @@
-package com.mischaboldy.mischa.rehapp.fragments;
+package com.mischaboldy.mischa.rehapp.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

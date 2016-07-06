@@ -9,48 +9,95 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainMenu">
+        <activity
+            android:name=".Activities.AppIntroduction"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".MyTraining"
+            android:name=".Activities.MainMenu"
             android:label="@string/title_activity_my_training"
-            android:parentActivityName=".MainMenu"
+            android:parentActivityName=".Activities.AppIntroduction"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mischaboldy.mischa.rehapp.MainMenu" />
+                android:value=".Activities.AppIntroduction" />
         </activity>
         <activity
-            android:name=".EnterWorkout"
+            android:name=".Activities.MyTraining"
+            android:label="@string/title_activity_my_training"
+            android:parentActivityName=".Activities.MainMenu"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MainMenu" />
+        </activity>
+        <activity
+            android:name=".Activities.EnterWorkout"
             android:label="@string/title_input_workout"
-            android:parentActivityName=".MyTraining"
+            android:parentActivityName=".Activities.MyTraining"
             android:theme="@style/AppTheme"
             android:noHistory="true">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mischaboldy.mischa.rehapp.MyTraining" />
+                android:value=".Activities.MyTraining" />
         </activity>
         <activity
-            android:name=".MyProfile"
+            android:name=".Activities.MyProfile"
             android:label="@string/my_profile_title"
-            android:parentActivityName=".MainMenu"
+            android:parentActivityName=".Activities.MainMenu"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mischaboldy.mischa.rehapp.MainMenu" />
+                android:value=".Activities.MainMenu" />
         </activity>
         <activity
-            android:name=".ShowProgress"
+            android:name=".Activities.ShowProgress"
             android:label="@string/show_progress_title"
-            android:parentActivityName=".MyProfile"
+            android:parentActivityName=".Activities.MyProfile"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mischaboldy.mischa.rehapp.MyProfile" />
+                android:value=".Activities.MyProfile" />
+        </activity>
+        <activity
+            android:name=".Activities.MyMedals"
+            android:label="@string/my_medals_title"
+            android:parentActivityName=".Activities.MainMenu"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MainMenu" />
+        </activity>
+        <activity
+            android:name=".Activities.Settings"
+            android:label="@string/settings_title"
+            android:parentActivityName=".Activities.MainMenu"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MainMenu" />
+        </activity>
+        <activity
+            android:name=".Activities.Help"
+            android:label="@string/help_title"
+            android:parentActivityName=".Activities.MainMenu"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MainMenu" />
+        </activity>
+        <activity
+            android:name=".Activities.Info"
+            android:label="@string/info_title"
+            android:parentActivityName=".Activities.MainMenu"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MainMenu" />
         </activity>
     </application>
 

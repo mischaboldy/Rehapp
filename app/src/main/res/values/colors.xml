@@ -14,6 +14,9 @@
     <color name="yellow">#F7EF08</color>
     <color name="blue">#1B08F7</color>
 
+    <color name="fadedRed">#1AFF7700</color>
+    <color name="fadedGreen">#1A138D23</color>
+    <color name="offWhite">#FAFAFA</color>
     <color name="cursorAccent">#ED1C24</color>
     <color name="controlNormal">#ED1C24</color>
     <color name="controlActivated">#ED1C24</color>

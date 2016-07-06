@@ -1,4 +1,4 @@
-package com.mischaboldy.mischa.rehapp;
+package com.mischaboldy.mischa.rehapp.ListViewAdapters;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -13,16 +13,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mischaboldy.mischa.rehapp.R;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class workoutListViewAdapter extends ArrayAdapter<String> {
+public class WorkoutListViewAdapter extends ArrayAdapter<String> {
     private Context mContext;
     private ArrayList<String> mValues = new ArrayList<String>();
 
-    public workoutListViewAdapter(Context context, ArrayList<String> values) {
+    public WorkoutListViewAdapter(Context context, ArrayList<String> values) {
         super(context, R.layout.workout_row_layout, values);
         this.mContext = context;
         this.mValues = values;

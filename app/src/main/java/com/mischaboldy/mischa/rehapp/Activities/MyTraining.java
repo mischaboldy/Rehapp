@@ -1,4 +1,4 @@
-package com.mischaboldy.mischa.rehapp;
+package com.mischaboldy.mischa.rehapp.Activities;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -7,11 +7,15 @@ import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.Spinner;
+
+import com.mischaboldy.mischa.rehapp.AchievementTracker;
+import com.mischaboldy.mischa.rehapp.R;
+import com.mischaboldy.mischa.rehapp.Fragments.TrainingFragment;
+import com.mischaboldy.mischa.rehapp.Fragments.ScheduleFragment;
 
 
 public class MyTraining extends AppCompatActivity {
@@ -24,6 +28,16 @@ public class MyTraining extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         SharedPreferences trainingPreferences = getSharedPreferences(PREFS_NAME, 0);
+
+        Bundle extras = getIntent().getExtras();
+        Boolean fromWorkout;
+        if(extras != null){
+            fromWorkout = extras.getBoolean("FROM_WORKOUTS");
+            if(fromWorkout == true){
+                AchievementTracker.trackAchievement(this, "workout");
+            }
+        }
+
 
         if (trainingPreferences != null){
             trainingSaved= trainingPreferences.getBoolean("trainingSaved", false);
