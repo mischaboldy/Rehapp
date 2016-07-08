@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:title="@string/reminder_preference"
+        android:defaultValue="false"
+        android:summary="@string/reminder_preference_summary"
+        android:key="reminderPreference" />
+    <Preference android:title="@string/remove_medals"
+        android:key="removeMedals"
+        android:summary="@string/remove_medals_summary"/>
+
+    <Preference android:title="@string/remove_profile"
+        android:key="removeProfile"
+        android:summary="@string/remove_profile_summary"/>
+
+    <Preference android:title="@string/remove_workouts"
+        android:key="removeWorkouts"
+        android:summary="@string/remove_workouts_summary"/>
+</PreferenceScreen>
+
+<!--<EditTextPreference-->
+<!--android:title="Your Name"-->
+<!--android:key="username"-->
+<!--android:summary="Please provide your username"></EditTextPreference>-->
+<!--<ListPreference-->
+<!--android:title="Download Details"-->
+<!--android:summary="Select the kind of data that you would like to download"-->
+<!--android:key="downloadType"-->
+<!--android:defaultValue="1"-->
+<!--android:entries="@array/listArray"-->
+<!--android:entryValues="@array/listValues" />-->

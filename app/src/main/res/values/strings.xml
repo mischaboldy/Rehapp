@@ -141,4 +141,12 @@ toestemming dit (beeld)materiaal beschikbaar hebben gesteld aan
 NAAM. Vermenigvuldiging in wat voor vorm dan ook is alleen
 toegestaan na voorafgaande toestemming door NAAM</string>
     <string name="news">Op dit moment is er geen nieuws beschikbaar</string>
+    <string name="reminder_preference">Herinneringen</string>
+    <string name="reminder_preference_summary">Deze optie zorgt ervoor dat u herinneringen ontvangt over uw workouts.</string>
+    <string name="remove_profile">Profiel verwijderen</string>
+    <string name="remove_medals">Medailles verwijderen</string>
+    <string name="remove_workouts">Workouts verwijderen</string>
+    <string name="remove_profile_summary">Hiermee verwijdert u uw profielgegevens</string>
+    <string name="remove_medals_summary">Hiermee verwijdert u uw medailles</string>
+    <string name="remove_workouts_summary">Hiermee verwijdert u uw workouts</string>
 </resources>
