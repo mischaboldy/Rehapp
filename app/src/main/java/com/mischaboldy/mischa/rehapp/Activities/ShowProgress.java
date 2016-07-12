@@ -1,27 +1,15 @@
 package com.mischaboldy.mischa.rehapp.Activities;
-
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.widget.Button;
 import android.widget.TextView;
 
-import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.components.YAxis;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.data.LineData;
-import com.github.mikephil.charting.data.LineDataSet;
-import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.mischaboldy.mischa.rehapp.R;
-import com.mischaboldy.mischa.rehapp.SampleFragmentPagerAdapter;
-
-import java.util.ArrayList;
+import com.mischaboldy.mischa.rehapp.PagerAdapters.MainFragmentPagerAdapter;
 
 /**
  * Created by mischa on 28/06/16.
@@ -41,6 +29,8 @@ public class ShowProgress extends AppCompatActivity {
 
         TextView appTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
         appTitle.setText(R.string.show_progress_title);
+        Typeface titleTypeFace = Typeface.createFromAsset(getAssets(), "fonts/KeepCalm-Medium.ttf");
+        appTitle.setTypeface(titleTypeFace);
 
         // Give the TabLayout the ViewPager
         TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
@@ -51,7 +41,7 @@ public class ShowProgress extends AppCompatActivity {
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
-        final SampleFragmentPagerAdapter adapter = new SampleFragmentPagerAdapter(getSupportFragmentManager(),
+        final MainFragmentPagerAdapter adapter = new MainFragmentPagerAdapter(getSupportFragmentManager(),
                 tabLayout.getTabCount());
 
         viewPager.setAdapter(adapter);

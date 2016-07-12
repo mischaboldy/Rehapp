@@ -1,5 +1,6 @@
 package com.mischaboldy.mischa.rehapp.Activities;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -42,6 +43,8 @@ public class Info extends AppCompatActivity {
 
         TextView appTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
         appTitle.setText(R.string.info_title);
+        Typeface titleTypeFace = Typeface.createFromAsset(getAssets(), "fonts/KeepCalm-Medium.ttf");
+        appTitle.setTypeface(titleTypeFace);
 
         // get the listview
         expListView = (ExpandableListView) findViewById(R.id.lvExp);

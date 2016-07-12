@@ -2,6 +2,7 @@ package com.mischaboldy.mischa.rehapp.Activities;
 
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -38,6 +39,8 @@ public class EnterWorkout extends AppCompatActivity {
 
         TextView appTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
         appTitle.setText(R.string.input_workout_title);
+        Typeface titleTypeFace = Typeface.createFromAsset(getAssets(), "fonts/KeepCalm-Medium.ttf");
+        appTitle.setTypeface(titleTypeFace);
 
         Button saveWorkoutButton = (Button)findViewById(R.id.save_workout_button);
         saveWorkoutButton.setClickable(false);
@@ -130,7 +133,7 @@ public class EnterWorkout extends AppCompatActivity {
         }
     }
 
-    public void save_workout(View view) {
+    public void saveWorkout(View view) {
 
         rehappDB = this.openOrCreateDatabase("RehappDatabase.sqlite", MODE_PRIVATE, null);
 
@@ -143,9 +146,8 @@ public class EnterWorkout extends AppCompatActivity {
         rehappDB.execSQL("INSERT INTO workouts (workout, duration, borgvalue) VALUES ('" + workout_type + "', '" +
                 workout_duration + "', '" + borgValue +"');");
 
-        Intent intent = new Intent(this, MyTraining.class);
+        Intent intent = new Intent(this, MyWorkouts.class);
         intent.putExtra("FROM_WORKOUTS", true);
         startActivity(intent);
-
     }
 }

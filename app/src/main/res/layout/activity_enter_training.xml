@@ -19,7 +19,7 @@
             android:padding="20dp">
 
             <TextView
-                android:id="@+id/title_profile_form_text_view"
+                android:id="@+id/title_training_info_form_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -27,7 +27,7 @@
                 android:layout_marginTop="5dp"
                 android:text="@string/title_training_info_form_text_view"
                 android:textColor="@color/blueTop"
-                android:textSize="40sp" />
+                android:textSize="30sp" />
 
 
             <EditText

@@ -43,6 +43,7 @@ public class DatabaseHelper {
 
     public static void createDatabase(Context context){
         try{
+            rehappDB = context.openOrCreateDatabase("RehappDatabase.sqlite", context.MODE_PRIVATE, null);
 
             rehappDB.execSQL("CREATE TABLE IF NOT EXISTS training " +
                     "(id integer primary key, heart_fq_rest integer, heart_fq_max integer," +
@@ -62,6 +63,11 @@ public class DatabaseHelper {
         catch (Exception e){
             Log.e("CONTACTS ERROR", "Error creating database");
         }
+    }
+
+    public static void deleteTable(Context context, String tableName){
+        rehappDB = context.openOrCreateDatabase("RehappDatabase.sqlite", context.MODE_PRIVATE, null);
+        rehappDB.delete(tableName, null, null);
     }
 
     public static void insertIntoDatabase(String query){

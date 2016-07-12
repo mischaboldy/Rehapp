@@ -13,8 +13,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/select_training_type_textview"
-        android:text="@string/select_training_type_text"
+        android:id="@+id/select_workout_type_textview"
         android:textAlignment="center"
         android:textSize="15sp"
         android:textColor="@color/blueTop"
@@ -102,8 +101,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/select_training_intensity_textview"
-        android:text="@string/select_training_intensity_text"
+        android:id="@+id/select_workout_intensity_textview"
         android:textAlignment="center"
         android:textSize="15sp"
         android:textColor="@color/blueTop"
@@ -140,8 +138,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/select_training_amount_textview"
-        android:text="@string/select_training_amount_text"
+        android:id="@+id/select_workout_amount_textview"
         android:textAlignment="center"
         android:textSize="15sp"
         android:textColor="@color/blueTop"
@@ -152,10 +149,10 @@
     android:layout_marginBottom="5dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/training_amount_spinner"
+    android:id="@+id/workout_amount_spinner"
     android:layout_gravity="center_horizontal"
     android:textAlignment="center"
-    android:entries="@array/training_amount_spinner"/>
+    android:entries="@array/workout_amount_spinner"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -167,9 +164,9 @@
         <ImageButton
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:background="@drawable/save_training_button"
+        android:background="@drawable/save_workout_button"
         android:layout_marginBottom="20dp"
-        android:onClick="save_training" />
+        android:onClick="saveTrainingProgram" />
     </LinearLayout>
 
 </LinearLayout>

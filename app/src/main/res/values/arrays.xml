@@ -14,7 +14,7 @@
         <item>hoog</item>
     </string-array>
 
-    <string-array name="training_amount_spinner">
+    <string-array name="workout_amount_spinner">
         <item>1 keer per week</item>
         <item>2 keer per week</item>
         <item>3 keer per week</item>
@@ -42,7 +42,12 @@
         <item>Shuttle wandeltest</item>
     </string-array>
 
-    <string-array name="sex_spinner">
+    <string-array name="sex_options">
+        <item>man</item>
+        <item>vrouw</item>
+    </string-array>
+
+    <string-array name="sex_values">
         <item>man</item>
         <item>vrouw</item>
     </string-array>

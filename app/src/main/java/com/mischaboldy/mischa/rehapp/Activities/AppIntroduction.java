@@ -1,6 +1,7 @@
 package com.mischaboldy.mischa.rehapp.Activities;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +27,8 @@ public class AppIntroduction extends AppCompatActivity {
 
         TextView appTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
         appTitle.setText(R.string.app_name);
+        Typeface titleTypeFace = Typeface.createFromAsset(getAssets(), "fonts/KeepCalm-Medium.ttf");
+        appTitle.setTypeface(titleTypeFace);
 
         //temporary fix to not show introduction:
         Intent intent = new Intent(this, MainMenu.class);

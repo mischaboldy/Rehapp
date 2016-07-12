@@ -2,9 +2,13 @@ package com.mischaboldy.mischa.rehapp.Activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -55,6 +59,8 @@ public class MyMedals extends AppCompatActivity {
 
         TextView appTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
         appTitle.setText(R.string.my_medals_title);
+        Typeface titleTypeFace = Typeface.createFromAsset(getAssets(), "fonts/KeepCalm-Medium.ttf");
+        appTitle.setTypeface(titleTypeFace);
 
         ListAdapter listAdapter = new MedalsListViewAdapter(this, medalsList);
 
@@ -62,6 +68,26 @@ public class MyMedals extends AppCompatActivity {
 
         listView.setAdapter(listAdapter);
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_medals, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        Intent intent;
+        switch (id) {
+            case R.id.open_leaderboards_menu_button:
+                intent = new Intent(this, Leaderboards.class);
+                startActivity(intent);
+                return true;
+        }
+        return super.onOptionsItemSelected(item); // important line
+    }
+
 
     private void sort2dArray(String[][] medalsList) {
 
@@ -103,10 +129,5 @@ public class MyMedals extends AppCompatActivity {
         editor.putBoolean("medalsMade", true);
         editor.apply();
 
-    }
-
-    public void shareMedals(View view) {
-        Intent intent = new Intent(this, MyProfile.class);
-        startActivity(intent);
     }
 }

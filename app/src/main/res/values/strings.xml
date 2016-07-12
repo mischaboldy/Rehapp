@@ -25,7 +25,7 @@
     <string name="name_input_text">Naam</string>
     <string name="save_profile_button_text">Profiel opslaan</string>
     <string name="my_profile_title">Mijn profiel</string>
-    <string name="my_training_title">Mijn training</string>
+    <string name="my_workouts_title">Mijn training</string>
     <string name="my_medals_title">Mijn medailles</string>
     <string name="date_of_birth_edit_text">Geboorte datum</string>
     <string name="weight_edit_text">Gewicht (kg)</string>
@@ -46,7 +46,7 @@
     <string name="walk_test_title">Looptest:</string>
     <string name="input_workout_title">Workout toevoegen</string>
     <string name="show_progress_title">Voortgang</string>
-    <string name="input_training_title">Trainingsgegevens invoeren</string>
+    <string name="input_training_title">Training invoeren</string>
     <string name="max_watt_edit_text">Maximale wattage (w)</string>
     <string name="vo2max_edit_text">VO2max</string>
     <string name="MET_edit_text">MET\'s</string>
@@ -86,10 +86,9 @@
         en geeft informatie over E-training mogelijkheden bij volwassenen. \n
 
         Deze applicatie fungeert niet als protocol, dus kunnen hieraan geen
-        rechten ontleend worden. (zie ook de disclaimer) \n
-        De tekst is zorgvuldig samengesteld en het is de bedoeling dat er
-        regelmatig updates verschijnen als er nieuwe ontwikkelingen in de
-        training en/of in de literatuur zijn.
+        rechten ontleend worden. (zie ook de disclaimer)De tekst is zorgvuldig
+        samengesteld en het is de bedoeling dat er regelmatig updates verschijnen
+        als er nieuwe ontwikkelingen in de training en/of in de literatuur zijn.
 
         Voor de samenstelling van deze applicatie is gebruikt gemaakt van
         verschillende bronnen met uiteenlopende levels of evidence. \n\n
@@ -102,7 +101,9 @@
         mogelijk te laten zijn. \n
         NAAM aanvaardt geen enkele verantwoordelijkheid voor schade op
         welke manier dan ook ontstaan door gebruik, onvolledigheid of
-        onjuistheid van de aangeboden informatie in deze applicatie</string>
+        onjuistheid van de aangeboden informatie in deze applicatie
+    </string>
+
     <string name="disclaimer">Geen enkele informatie verstrekt door deze applicatie zal enige
 vorm van garantie geven. NAAM is niet aansprakelijk voor
 ongewenste uitkomsten of effecten voortvloeiend uit de toegepaste
@@ -149,4 +150,14 @@ toegestaan na voorafgaande toestemming door NAAM</string>
     <string name="remove_profile_summary">Hiermee verwijdert u uw profielgegevens</string>
     <string name="remove_medals_summary">Hiermee verwijdert u uw medailles</string>
     <string name="remove_workouts_summary">Hiermee verwijdert u uw workouts</string>
+    <string name="my_calendar_title">Mijn agenda</string>
+    <string name="leaderboards_title">Ranglijst</string>
+    <string name="enter_training_menu_button">Training invoeren</string>
+    <string name="enter_workout_menu_button">Workout invoeren</string>
+    <string name="enter_test_menu_button">Test invoeren</string>
+    <string name="open_calendar_menu_button">Agenda bekijken</string>
+    <string name="open_leaderboards_menu_button">Bekijk ranglijst</string>
+    <string name="open_progres_menu_button">Voortgang tonen</string>
+    <string name="open_test_menu_button">Test invoeren</string>
+    <string name="open_training_program_menu_button">Trainingsprogramma aanpassen</string>
 </resources>

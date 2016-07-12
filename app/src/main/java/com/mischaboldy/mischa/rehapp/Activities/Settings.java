@@ -1,49 +1,50 @@
 package com.mischaboldy.mischa.rehapp.Activities;
 
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.preference.Preference;
-import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
+import android.preference.PreferenceManager;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
-
 import com.mischaboldy.mischa.rehapp.AchievementTracker;
+import com.mischaboldy.mischa.rehapp.DatabaseHelper;
 import com.mischaboldy.mischa.rehapp.R;
 
 /**
  * Created by mischa on 05/07/16.
  */
-public class Settings extends PreferenceActivity{
+public class Settings extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getFragmentManager().beginTransaction().replace(android.R.id.content, new MyPreferenceFragment()).commit();
+        setContentView(R.layout.settings_page);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        TextView appTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
+        appTitle.setText(R.string.info_title);
+        Typeface titleTypeFace = Typeface.createFromAsset(getAssets(), "fonts/KeepCalm-Medium.ttf");
+        appTitle.setTypeface(titleTypeFace);
+
+
+        // Display the fragment as the main content.
+        getFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                new MyPreferenceFragment()).commit();
     }
 
 
-    @Override
-    protected void onPostCreate(Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
-
-        LinearLayout root = (LinearLayout)findViewById(android.R.id.list).getParent().getParent().getParent();
-        Toolbar bar = (Toolbar) LayoutInflater.from(this).inflate(R.layout.settings_toolbar, root, false);
-        root.addView(bar, 0); // insert at top
-        bar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-    }
-
-
-    public static class MyPreferenceFragment extends PreferenceFragment
-    {
+    public static class MyPreferenceFragment extends PreferenceFragment {
         @Override
         public void onCreate(final Bundle savedInstanceState)
         {
@@ -64,7 +65,7 @@ public class Settings extends PreferenceActivity{
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
                     Toast.makeText(getActivity(),"Workouts verwijderd",Toast.LENGTH_SHORT).show();
-                    removeWorkouts();
+                    removeWorkouts(getActivity());
                     return true;
                 }
             });
@@ -75,7 +76,7 @@ public class Settings extends PreferenceActivity{
                 public boolean onPreferenceClick(Preference preference) {
                     Toast.makeText(getActivity(),"Profiel verwijderd",Toast.LENGTH_SHORT).show();
 
-                    removeProfile();
+                    removeProfile(getActivity());
                     return true;
                 }
             });
@@ -83,15 +84,21 @@ public class Settings extends PreferenceActivity{
 
     }
 
-    public static void removeMedals(Context context){
-        AchievementTracker.removeMedals(context);
-    }
+    public static void removeMedals(Context context){ AchievementTracker.removeMedals(context); }
 
 
-    public static void removeWorkouts(){
-    }
+    public static void removeWorkouts(Context context){ DatabaseHelper.deleteTable(context, "workouts"); }
 
 
-    public static void removeProfile(){
+    public static void removeProfile(Context context){
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString("name", "");
+        editor.putString("userName", "");
+        editor.putString("dob", "");
+        editor.putString("height", "");
+        editor.putString("weight", "");
+        editor.putString("sex", "male");
+        editor.apply();
     }
 }

@@ -25,9 +25,9 @@ public class TrainingProgressFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_training_progress, container, false);
+        View theView = inflater.inflate(R.layout.fragment_training_progress, container, false);
 
-        LineChart mLineChart = (LineChart) view.findViewById(R.id.chart);
+        LineChart mLineChart = (LineChart) theView.findViewById(R.id.chart);
 
         ArrayList<Entry> heartFqRestValues = new ArrayList<Entry>();
         ArrayList<Entry> heartFqMaxValues = new ArrayList<Entry>();
@@ -99,6 +99,6 @@ public class TrainingProgressFragment extends Fragment {
         mLineChart.setData(data);
         mLineChart.invalidate(); // refresh
 
-        return view;
+        return theView;
     }
 }

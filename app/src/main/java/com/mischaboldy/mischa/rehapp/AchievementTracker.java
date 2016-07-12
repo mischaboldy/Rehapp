@@ -56,7 +56,7 @@ public class AchievementTracker {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
 
-        builder.setMessage("U heeft een nieuwe medaille verdient")
+        builder.setMessage("Gefeliciteerd! \n U heeft een nieuwe medaille verdient")
                 .setTitle("Medaille")
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {

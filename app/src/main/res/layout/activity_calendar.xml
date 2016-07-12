@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <CalendarView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:id="@+id/calendarView" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Op dit moment kan u hier nog niks, in de toekomst kunt u hier uw trainingsprogramma kunnen zien"/>
+</LinearLayout>

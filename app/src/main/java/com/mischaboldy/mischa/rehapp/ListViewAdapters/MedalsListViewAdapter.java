@@ -2,6 +2,7 @@ package com.mischaboldy.mischa.rehapp.ListViewAdapters;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -68,7 +69,7 @@ public class MedalsListViewAdapter extends ArrayAdapter<String> {
             case "infoMedal":
                 title = "Informatie medaille";
                 image = R.drawable.cycle_base;
-                description ="Deze medaille behaalt u wanneer u alle informatie in het informatie scherm heeft bekeken";
+                description ="Deze medaille behaalt u wanneer u het informatie scherm heeft bekeken";
                 break;
         }
 
@@ -85,6 +86,8 @@ public class MedalsListViewAdapter extends ArrayAdapter<String> {
 
         medalImageView.setImageResource(image);
         titleTextView.setText(title);
+        Typeface titleTypeFace = Typeface.createFromAsset(theView.getContext().getAssets(), "fonts/KeepCalm-Medium.ttf");
+        titleTextView.setTypeface(titleTypeFace);
         descriptionTextView.setText(description);
         achievedTextView.setText(achieved);
         achievedTextView.setTextColor(ContextCompat.getColor(mContext, color));

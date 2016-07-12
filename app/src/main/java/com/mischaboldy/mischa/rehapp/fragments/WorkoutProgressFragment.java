@@ -25,20 +25,20 @@ public class WorkoutProgressFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_workout_progress, container, false);
+        View theView = inflater.inflate(R.layout.fragment_workout_progress, container, false);
 
-        LineChart mLineChart = (LineChart) view.findViewById(R.id.chart);
+        LineChart mLineChart = (LineChart) theView.findViewById(R.id.chart);
 
         ArrayList<Entry> workoutValues = new ArrayList<Entry>();
         ArrayList<Entry> durationValues = new ArrayList<Entry>();
         ArrayList<Entry> borgValues = new ArrayList<Entry>();
 
 
-        ArrayList<String> heartFqRestData = DatabaseHelper.getTrainingData(getContext(), "workout", "workouts");
+        ArrayList<String> workoutValuesData = DatabaseHelper.getTrainingData(getContext(), "workout", "workouts");
         ArrayList<String> durationData = DatabaseHelper.getTrainingData(getContext(), "duration", "workouts");
         ArrayList<String> borgValueData = DatabaseHelper.getTrainingData(getContext(), "borgvalue", "workouts");
 
-        for(int i = 0; i<heartFqRestData.size(); i++){
+        for(int i = 0; i<workoutValuesData.size(); i++){
             Entry durationEntry = new Entry(Float.parseFloat(durationData.get(i)), i);
             Entry borgValueEntry = new Entry(Float.parseFloat(borgValueData.get(i)), i);
 
@@ -61,12 +61,12 @@ public class WorkoutProgressFragment extends Fragment {
 
         ArrayList<String> xValues = new ArrayList<String>();
 
-        xValues  = DatabaseHelper.getTrainingData(getContext(), "dt", "training");
+        xValues  = DatabaseHelper.getTrainingData(getContext(), "dt", "workouts");
 
         LineData data = new LineData(xValues, dataSets);
         mLineChart.setData(data);
         mLineChart.invalidate(); // refresh
 
-        return view;
+        return theView;
     }
 }

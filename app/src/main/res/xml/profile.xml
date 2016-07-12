@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+    android:title="Gebruikersnaam"
+    android:key="name"></EditTextPreference>
+    <EditTextPreference
+        android:title="Date of birth"
+        android:key="dob"></EditTextPreference>
+    <ListPreference
+        android:title="Geslacht"
+        android:key="sex"
+        android:entries="@array/sex_options"
+        android:entryValues="@array/sex_values"></ListPreference>
+    <EditTextPreference
+        android:title="Gewicht"
+        android:key="weight"
+        android:inputType="number"></EditTextPreference>
+    <EditTextPreference
+        android:title="Lengte"
+        android:key="height"
+        android:inputType="number"></EditTextPreference>
+    <Preference android:title="@string/open_training_program_menu_button"
+        android:key="openTrainingProgram"/>
+    <Preference android:title="@string/open_progres_menu_button"
+        android:key="openProgress"/>
+</PreferenceScreen>
