@@ -1,6 +1,7 @@
 package com.mischaboldy.mischa.rehapp.Activities;
 
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -14,15 +15,13 @@ import com.mischaboldy.mischa.rehapp.Users;
 import com.mischaboldy.mischa.rehapp.R;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
 
 /**
  * Created by mischa on 11/07/16.
  */
-public class Leaderboards extends AppCompatActivity {
+public class Leaderboard extends AppCompatActivity {
 
     public static final String PREFS_NAME1 = "MedalsFile";
     public static final String PREFS_NAME2 = "ProfileInfoFile";
@@ -34,7 +33,7 @@ public class Leaderboards extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_leaderboards);
+        setContentView(R.layout.activity_leaderboard);
         medals = getSharedPreferences(PREFS_NAME1, 0);
         profileInfo = getSharedPreferences(PREFS_NAME2, 0);
 
@@ -46,10 +45,15 @@ public class Leaderboards extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         TextView appTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
+        TextView leaderboardSubtitle = (TextView) findViewById(R.id.leaderboard_subtitle);
+        Typeface titleTypeFace = Typeface.createFromAsset(getAssets(), "fonts/KeepCalm-Medium.ttf");
+
+        appTitle.setTypeface(titleTypeFace);
+        leaderboardSubtitle.setTypeface(titleTypeFace);
+
         appTitle.setText(R.string.leaderboards_title);
 
         leaderboards2dList = getLeaderboardsList();
-
 
         Collections.sort(leaderboards2dList, new Comparator<Users>(){
             public int compare(Users emp1, Users emp2) {
@@ -93,18 +97,16 @@ public class Leaderboards extends AppCompatActivity {
     }
 
     public ArrayList<Users> getLeaderboardsList() {
-        Users user1 = new Users("gebruiker2", "3");
-        Users user2 = new Users("gebruiker3", "12");
-        Users user3 = new Users("gebruiker4", "2");
-        Users user4 = new Users("gebruiker5", "7");
-        Users user5 = new Users("gebruiker6", "9");
-        Users user6 = new Users("gebruiker7", "13");
-        Users user7 = new Users("gebruiker8", "1");
-        Users user8 = new Users("gebruiker9", "13");
-        Users user9 = new Users("gebruiker10", "10");
-        Users user10 = new Users("gebruiker11", "5");
-        Users user11 = new Users("gebruiker12", "0");
-        Users user12 = getUser();
+        Users user1 = new Users("Marjan", "3");
+        Users user2 = new Users("Ben", "5");
+        Users user3 = new Users("Karel", "2");
+        Users user4 = new Users("Bram", "7");
+        Users user5 = new Users("Stefan", "9");
+        Users user6 = new Users("Eefje", "4");
+        Users user7 = new Users("John", "1");
+        Users user8 = new Users("Simon", "8");
+        Users user9 = new Users("Arend", "8");
+        Users user10 = getUser();
 
         ArrayList<Users> userList = new ArrayList<Users>();
 
@@ -118,8 +120,6 @@ public class Leaderboards extends AppCompatActivity {
         userList.add(user8);
         userList.add(user9);
         userList.add(user10);
-        userList.add(user11);
-        userList.add(user12);
 
         return userList;
     }

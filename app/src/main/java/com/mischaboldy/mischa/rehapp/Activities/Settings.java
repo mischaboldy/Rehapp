@@ -1,5 +1,6 @@
 package com.mischaboldy.mischa.rehapp.Activities;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
@@ -49,7 +50,7 @@ public class Settings extends AppCompatActivity {
         public void onCreate(final Bundle savedInstanceState)
         {
             super.onCreate(savedInstanceState);
-            addPreferencesFromResource(R.xml.preferences);
+            addPreferencesFromResource(R.xml.settings);
             Preference removeMedalsButton = findPreference("removeMedals");
             removeMedalsButton.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
@@ -75,20 +76,40 @@ public class Settings extends AppCompatActivity {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
                     Toast.makeText(getActivity(),"Profiel verwijderd",Toast.LENGTH_SHORT).show();
-
                     removeProfile(getActivity());
                     return true;
                 }
             });
-        }
 
+            Preference removeTrainingButton = findPreference("removeTraining");
+            removeTrainingButton.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+                @Override
+                public boolean onPreferenceClick(Preference preference) {
+                    Toast.makeText(getActivity(),"Trainingen verwijderd",Toast.LENGTH_SHORT).show();
+                    removeTraining(getActivity());
+                    return true;
+                }
+            });
+
+            Preference removeTestButton = findPreference("removeTests");
+            removeTestButton.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+                @Override
+                public boolean onPreferenceClick(Preference preference) {
+                    Toast.makeText(getActivity(),"Tests verwijderd",Toast.LENGTH_SHORT).show();
+                    removeTests(getActivity());
+                    return true;
+                }
+            });
+        }
     }
 
     public static void removeMedals(Context context){ AchievementTracker.removeMedals(context); }
 
+    public static void removeWorkouts(Context context){ DatabaseHelper.clearTable(context, "workouts"); }
 
-    public static void removeWorkouts(Context context){ DatabaseHelper.deleteTable(context, "workouts"); }
+    public static void removeTraining(Context context){ DatabaseHelper.clearTable(context, "training"); }
 
+    public static void removeTests(Context context){ DatabaseHelper.clearTable(context, "test"); }
 
     public static void removeProfile(Context context){
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);

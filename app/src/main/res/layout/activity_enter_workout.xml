@@ -4,178 +4,225 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include
-        layout="@layout/toolbar_main"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/select_workout_training"
-        android:text="@string/select_workout_training_text"
-        android:textAlignment="center"
-        android:textSize="15sp"
-        android:textColor="@color/blueTop"
-        android:layout_gravity="center_horizontal" />
+        <include
+            layout="@layout/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
-        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:id="@+id/radiogroup_top"
-            android:weightSum="3">
-
-            <RadioButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="15dp"
-                android:id="@+id/cycle_radio_button"
-                android:button="@null"
-                android:background="@drawable/cycle"
-                android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:onClick="workoutRadioButtonClicked"/>
-
-            <RadioButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="15dp"
-                android:id="@+id/walk_radio_button"
-                android:button="@null"
-                android:background="@drawable/walk"
-                android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:onClick="workoutRadioButtonClicked"/>
-
-            <RadioButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="15dp"
-                android:id="@+id/cardio_radio_button"
-                android:button="@null"
-                android:background="@drawable/cardio"
-                android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:onClick="workoutRadioButtonClicked"/>
-        </RadioGroup>
-
-        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:id="@+id/radiogroup_bottom"
-            android:weightSum="3">
-
-            <RadioButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="15dp"
-                android:id="@+id/hometrainer_radio_button"
-                android:button="@null"
-                android:background="@drawable/hometrainer"
-                android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:onClick="workoutRadioButtonClicked"/>
-
-            <RadioButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="15dp"
-                android:id="@+id/jog_radio_button"
-                android:button="@null"
-                android:background="@drawable/jog"
-                android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:onClick="workoutRadioButtonClicked"/>
-
-            <RadioButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="15dp"
-                android:id="@+id/nordic_walking_radio_button"
-                android:button="@null"
-                android:background="@drawable/nordic_walking"
-                android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:onClick="workoutRadioButtonClicked"/>
-        </RadioGroup>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/select_workout_duration_textview"
-        android:text="@string/select_workout_duration_text"
-        android:textAlignment="center"
-        android:textSize="15sp"
-        android:textColor="@color/blueTop"
-        android:layout_gravity="center_horizontal" />
-
-    <Spinner
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/workout_duration_spinner"
-        android:layout_gravity="center_horizontal"
-        android:entries="@array/workout_duration_spinner"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/select_borgschale_textview"
-        android:text="@string/select_borgschale_text"
-        android:textAlignment="center"
-        android:textSize="15sp"
-        android:textColor="@color/blueTop"
-        android:layout_gravity="center_horizontal" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal"
-        android:weightSum="6">
-
-        <SeekBar
-            android:layout_width="175dp"
-            android:layout_height="match_parent"
-            android:id="@+id/borgschale_slider"
-            android:layout_margin="20dp"
-            android:paddingTop="40dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="2"/>
+            android:orientation="vertical"
+            android:background="@drawable/background_list_view_general"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp">
 
         <TextView
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:id="@+id/borg_value_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/select_workout_training"
+            android:text="@string/select_workout_training_text"
             android:textAlignment="center"
-            android:paddingTop="30dp"
-            android:text="6"
+            android:textSize="18sp"
             android:textColor="@color/blueTop"
-            android:textSize="45sp"
-            android:layout_weight="2"/>
+            android:layout_gravity="center_horizontal" />
 
-        <ImageView
-            android:layout_width="75dp"
-            android:layout_height="match_parent"
-            android:paddingTop="10dp"
-            android:paddingRight="20dp"
-            android:id="@+id/borg_value_image_view"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="2" />
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:id="@+id/radiogroup_top"
+                android:layout_marginTop="15dp"
+                android:weightSum="3">
 
-    </LinearLayout>
+                <RadioButton
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:id="@+id/cycle_radio_button"
+                    android:button="@null"
+                    android:background="@drawable/cycle"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:onClick="workoutRadioButtonClicked"/>
 
+                <RadioButton
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:id="@+id/walk_radio_button"
+                    android:button="@null"
+                    android:background="@drawable/walk"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:onClick="workoutRadioButtonClicked"/>
+
+                <RadioButton
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:id="@+id/cardio_radio_button"
+                    android:button="@null"
+                    android:background="@drawable/cardio"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:onClick="workoutRadioButtonClicked"/>
+            </RadioGroup>
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:id="@+id/radiogroup_bottom"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:weightSum="3">
+
+                <RadioButton
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:id="@+id/hometrainer_radio_button"
+                    android:button="@null"
+                    android:background="@drawable/hometrainer"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:onClick="workoutRadioButtonClicked"/>
+
+                <RadioButton
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:id="@+id/jog_radio_button"
+                    android:button="@null"
+                    android:background="@drawable/jog"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:onClick="workoutRadioButtonClicked"/>
+
+                <RadioButton
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:id="@+id/nordic_walking_radio_button"
+                    android:button="@null"
+                    android:background="@drawable/nordic_walking"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:onClick="workoutRadioButtonClicked"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/background_list_view_general"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/select_workout_duration_textview"
+                android:text="@string/select_workout_duration_text"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="@color/blueTop"
+                android:layout_gravity="center_horizontal" />
+
+            <Spinner
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/workout_duration_spinner"
+                android:layout_gravity="center_horizontal"
+                android:entries="@array/workout_duration_spinner"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/background_list_view_general"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/select_borgschale_textview"
+                android:text="@string/select_borgschale_text"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="@color/blueTop"
+                android:layout_gravity="center_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <SeekBar
+                    android:layout_width="175dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/borgschale_slider"
+                    android:layout_margin="20dp"
+                    android:paddingTop="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/borg_value_text_view"
+                    android:textAlignment="center"
+                    android:paddingTop="25dp"
+                    android:text="6"
+                    android:textColor="@color/blueTop"
+                    android:textSize="45sp"
+                    android:layout_weight="2"/>
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:id="@+id/borg_value_image_view"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2" />
+
+            </LinearLayout>
+        </LinearLayout>
     <Button
         android:layout_width="250dp"
         android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/blueTop"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
-        android:layout_gravity="center"
+        android:text="Workout opslaan"
         android:id="@+id/save_workout_button"
-        android:background="@drawable/save_workout_button"
-        android:onClick="saveWorkout"/>
+        android:onClick="saveWorkout"
+        android:textColor="#fff" />
 </LinearLayout>

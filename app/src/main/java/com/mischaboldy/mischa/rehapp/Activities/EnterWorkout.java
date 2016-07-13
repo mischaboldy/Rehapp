@@ -125,7 +125,7 @@ public class EnterWorkout extends AppCompatActivity {
                 break;
             }
             case R.id.nordic_walking_radio_button: {
-                selectedWorkout = "nordic walking";
+                selectedWorkout = "nordic_walking";
                 radiogroup_top.clearCheck();
                 break;
 

@@ -65,7 +65,7 @@ public class DatabaseHelper {
         }
     }
 
-    public static void deleteTable(Context context, String tableName){
+    public static void clearTable(Context context, String tableName){
         rehappDB = context.openOrCreateDatabase("RehappDatabase.sqlite", context.MODE_PRIVATE, null);
         rehappDB.delete(tableName, null, null);
     }

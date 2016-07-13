@@ -2,171 +2,204 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:weightSum="3">
+    android:layout_height="match_parent">
 
     <include
         layout="@layout/toolbar_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/select_workout_type_textview"
-        android:textAlignment="center"
-        android:textSize="15sp"
-        android:textColor="@color/blueTop"
-        android:layout_gravity="center_horizontal" />
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:weightSum="3">
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:id="@+id/cycle_button"
-            android:button="@null"
-            android:background="@drawable/cycle"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:id="@+id/walk_button"
-            android:button="@null"
-            android:background="@drawable/walk"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:id="@+id/cardio_button"
-            android:button="@null"
-            android:background="@drawable/cardio"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:weightSum="3">
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:padding="0dp"
-            android:id="@+id/hometrainer_button"
-            android:button="@null"
-            android:background="@drawable/hometrainer"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:id="@+id/jog_button"
-            android:button="@null"
-            android:background="@drawable/jog"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:id="@+id/nordic_walking_button"
-            android:button="@null"
-            android:background="@drawable/nordic_walking"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical" />
-
-    </LinearLayout>
-
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/select_workout_intensity_textview"
-        android:textAlignment="center"
-        android:textSize="15sp"
-        android:textColor="@color/blueTop"
-        android:layout_gravity="center_horizontal" />
+        android:orientation="vertical"
+        android:background="@drawable/background_list_view_general"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2">
-
-        <Spinner
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_width="0dp"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/intensity_type_spinner"
-            android:layout_gravity="center_horizontal"
-            android:entries="@array/intensity_type_spinner"/>
-
-        <Spinner
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:id="@+id/select_workout_type_textview"
             android:textAlignment="center"
-            android:id="@+id/intensity_amount_spinner"
-            android:layout_gravity="center_horizontal"
-            android:entries="@array/intensity_amount_spinner"/>
+            android:text="Kies uw gewenste workoutsoort:"
+            android:textSize="18sp"
+            android:textColor="@color/blueTop"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <CheckBox
+                android:layout_width="80dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/cycle_button"
+                android:button="@null"
+                android:background="@drawable/cycle"
+                android:layout_gravity="center_vertical" />
+
+            <CheckBox
+                android:layout_width="80dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/walk_button"
+                android:button="@null"
+                android:background="@drawable/walk"
+                android:layout_gravity="center_vertical" />
+
+            <CheckBox
+                android:layout_width="80dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:id="@+id/cardio_button"
+                android:button="@null"
+                android:background="@drawable/cardio"
+                android:layout_gravity="center_vertical" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp">
+
+            <CheckBox
+                android:layout_width="80dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/hometrainer_button"
+                android:button="@null"
+                android:background="@drawable/hometrainer"
+                android:layout_gravity="center_vertical" />
+
+            <CheckBox
+                android:layout_width="80dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/jog_button"
+                android:button="@null"
+                android:background="@drawable/jog"
+                android:layout_gravity="center_vertical"/>
+
+            <CheckBox
+                android:layout_width="80dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:id="@+id/nordic_walking_button"
+                android:button="@null"
+                android:background="@drawable/nordic_walking"
+                android:layout_gravity="center_vertical" />
+
+        </LinearLayout>
     </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/select_workout_amount_textview"
-        android:textAlignment="center"
-        android:textSize="15sp"
-        android:textColor="@color/blueTop"
-        android:layout_gravity="center_horizontal" />
-
-    <Spinner
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="5dp"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/workout_amount_spinner"
-    android:layout_gravity="center_horizontal"
-    android:textAlignment="center"
-    android:entries="@array/workout_amount_spinner"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1"
-        android:gravity="center|bottom"
-        android:orientation="vertical" >
-        
-        <ImageButton
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/background_list_view_general"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/bla"
+            android:textAlignment="center"
+            android:text="Kies uw gewenste workouts:"
+            android:textSize="18sp"
+            android:textColor="@color/blueTop"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:weightSum="2">
+
+            <Spinner
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/intensity_type_spinner"
+                android:layout_gravity="center_horizontal"
+                android:entries="@array/intensity_type_spinner"/>
+
+            <Spinner
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:id="@+id/intensity_amount_spinner"
+                android:layout_gravity="center_horizontal"
+                android:entries="@array/intensity_amount_spinner"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/background_list_view_general"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/select_workout_amount_textview"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:text="Selecteer gewenste aantal workouts:"
+            android:textColor="@color/blueTop"
+            android:layout_gravity="center_horizontal" />
+
+        <Spinner
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/workout_amount_spinner"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:entries="@array/workout_amount_spinner"/>
+    </LinearLayout>
+
+    <Button
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:background="@drawable/save_workout_button"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/blueTop"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
-        android:onClick="saveTrainingProgram" />
-    </LinearLayout>
-
+        android:text="Trainginsprogramma opslaan"
+        android:id="@+id/save_training_button"
+        android:onClick="saveTrainingProgram"
+        android:textColor="#fff" />
 </LinearLayout>

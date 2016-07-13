@@ -7,14 +7,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.mischaboldy.mischa.rehapp.Activities.MyProfile;
 import com.mischaboldy.mischa.rehapp.ListViewAdapters.MedalsListViewAdapter;
 import com.mischaboldy.mischa.rehapp.R;
 
@@ -81,7 +78,7 @@ public class MyMedals extends AppCompatActivity {
         Intent intent;
         switch (id) {
             case R.id.open_leaderboards_menu_button:
-                intent = new Intent(this, Leaderboards.class);
+                intent = new Intent(this, Leaderboard.class);
                 startActivity(intent);
                 return true;
         }

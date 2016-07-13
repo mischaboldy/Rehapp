@@ -2,12 +2,10 @@ package com.mischaboldy.mischa.rehapp.ListViewAdapters;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -25,7 +23,7 @@ public class WorkoutListViewAdapter extends ArrayAdapter<String> {
     private ArrayList<String> mValues = new ArrayList<String>();
 
     public WorkoutListViewAdapter(Context context, ArrayList<String> values) {
-        super(context, R.layout.workout_row_layout, values);
+        super(context, R.layout.row_layout_workouts, values);
         this.mContext = context;
         this.mValues = values;
     }
@@ -35,13 +33,13 @@ public class WorkoutListViewAdapter extends ArrayAdapter<String> {
 
         final LayoutInflater theInflater =  LayoutInflater.from(getContext());
 
-        final View theView = theInflater.inflate(R.layout.workout_row_layout,
+        final View theView = theInflater.inflate(R.layout.row_layout_workouts,
                 parent, false);
 
         String workout = getItem(position);
         String[] workoutArray = workout.split(":");
         final Integer id = Integer.parseInt(workoutArray[0]);
-        String workout_type = workoutArray[1] + "_base";
+        String workout_type = workoutArray[1] + "_bare";
         String duration = workoutArray[2] + " minuten";
         String borgValue = workoutArray[3];
 

@@ -23,14 +23,14 @@ public class MedalsListViewAdapter extends ArrayAdapter<String> {
 
 
     public MedalsListViewAdapter(Context context, String[] medals) {
-        super(context, R.layout.medal_row_layout, medals);
+        super(context, R.layout.row_layout_medals, medals);
         this.mContext = context;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         final LayoutInflater theInflater = LayoutInflater.from(getContext());
-        final View theView = theInflater.inflate(R.layout.medal_row_layout,
+        final View theView = theInflater.inflate(R.layout.row_layout_medals,
                 parent, false);
 
         TextView titleTextView = (TextView) theView.findViewById(R.id.medal_title_text_view);
@@ -48,27 +48,27 @@ public class MedalsListViewAdapter extends ArrayAdapter<String> {
         switch (medal) {
             case "workoutMedal":
                 title = "Workout medaille";
-                image = R.drawable.cycle_base;
+                image = R.drawable.medal_workout;
                 description ="Deze medaille behaalt u wanneer u een workout invoert";
                 break;
             case "trainingMedal":
                 title = "Trainingsmedaille";
-                image = R.drawable.cycle_base;
+                image = R.drawable.medal_training;
                 description ="Deze medaille behaalt u wanneer u een training invoert";
                 break;
             case "testMedal":
                 title = "Test medaille";
-                image = R.drawable.cycle_base;
+                image = R.drawable.medal_test;
                 description ="Deze medaille behaalt u wanneer u een test heeft invoert";
                 break;
             case "helpMedal":
                 title = "Hulp medaille";
-                image = R.drawable.cycle_base;
+                image = R.drawable.medal_help;
                 description ="Deze medaille behaalt u wanneer u het help scherm heeft bekeken";
                 break;
             case "infoMedal":
                 title = "Informatie medaille";
-                image = R.drawable.cycle_base;
+                image = R.drawable.medal_info;
                 description ="Deze medaille behaalt u wanneer u het informatie scherm heeft bekeken";
                 break;
         }

@@ -4,7 +4,7 @@
     <string name="title_activity_my_training">MyTraining</string>
     <string name="title_activity_my_training_schedule">MyTrainingSchedule</string>
     <string name="title_input_workout">Workout toevoegen</string>
-
+    <string name="title_training_program">Trainingsprogramma</string>
 
     <string name="select_training_type_text">Selecteer minimaal een trainingstype:</string>
     <string name="select_training_intensity_text">Kies uw trainingsintensiteit:</string>
@@ -17,15 +17,15 @@
 
     <string name="input_workout_button_text">Workout toevoegen</string>
     <string name="save_workout_button_text">Workout opslaan</string>
-    <string name="select_workout_duration_text">Hoe lang heeft u getraind?</string>
-    <string name="select_workout_training_text">Wat voor training heeft u gedaan?</string>
-    <string name="select_borgschale_text">Wat was de belasting op de Borgschaal?</string>
-    <string name="workout_row_text">Trainingsduur: \nBorgscore: \nDatum: </string>
+    <string name="select_workout_duration_text">Selecteer de duur van uw workout:</string>
+    <string name="select_workout_training_text">Selecteer een workout:</string>
+    <string name="select_borgschale_text">Geef belasting op de Borgschaal aan:</string>
+    <string name="workout_row_text">Workoutduur: \nBorgscore: \nDatum: </string>
     <string name="title_profile_form_text_view">Profiel informatie</string>
     <string name="name_input_text">Naam</string>
     <string name="save_profile_button_text">Profiel opslaan</string>
     <string name="my_profile_title">Mijn profiel</string>
-    <string name="my_workouts_title">Mijn training</string>
+    <string name="my_workouts_title">Mijn workouts</string>
     <string name="my_medals_title">Mijn medailles</string>
     <string name="date_of_birth_edit_text">Geboorte datum</string>
     <string name="weight_edit_text">Gewicht (kg)</string>
@@ -57,21 +57,24 @@
     <string name="help_title">Help</string>
     <string name="info_title">Extra informatie</string>
     <string name="see_medal">Medaille tonen</string>
-    <string name="question1">Hoe werkt de app?</string>
-    <string name="question2">Wat kan ik doen met de app?</string>
-    <string name="question3">Wat moet ik doen als iets niet begrijp?</string>
-    <string name="question4">Wat moet ik doen als ik iets verkeerd heb ingevoerd?</string>
-    <string name="question5">wat ?</string>
-    <string name="answer1">In deze app kan u verschillende gegevens bijhouden. In het profiel gedeelte kan u test- en trainingsgegevens invoeren.
-    </string>
-    <string name="answer2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
-    <string name="answer3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
-    <string name="answer4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
-    <string name="answer5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="question1">Hoe werkt Rehapp</string>
+    <string name="question2">Wat kan Rehapp voor mij doen?</string>
+    <string name="question3">Waar kan ik terecht voor vragen over Rehapp?</string>
+    <string name="question4">Er ging iets fout met Rehapp, wat nu?</string>
+    <string name="answer1">Rehapp is bedoeld als hulp bij het revalideren. Rehapp houdt verschillende gegevens voor u bij zodat u uw voortgang makkelijk kunt bekijken. Daarnaast Geeft Rehapp u herinneringen en positieve feedback zodat u makkelijk bij blijft met uw oefeningen en workouts.</string>
+    <string name="answer2">Als u bij Mijn profiel een trainingsprogramma selecteerd. Dan zal rehapp uw automatisch herinneringen sturen om te gaan oefenen. Als u daarnaast ook uw workouts, testen en trainingen bij Rehapp invoert dan kunt u makkelijk uw voortgang bekijken. Op die manier heeft u goeie informatie over uw revalidatie en kunt u aanpassingen maken waar nodig.</string>
+    <string name="answer3">Voor vragen kunt u terecht op Rehapp.nl</string>
+    <string name="answer4">Als er een fout is opgetreden dan willen wij u vragen om dit te melden op Rehapp.nl. In de tussentijd kunt u Rehapp gewoon blijven gebruiken.</string>
     <string name="try_again_toast_text">Op dit moment is helaas niemand bereikbaar, probeert u het later nog eens</string>
 
     <string name="app_introduction_title">Welkom bij Rehapp</string>
-    <string name="app_introduction">Rehapp is een app die u helpt bij het revalideren. Met deze app kan u verschillende dingen doen. </string>
+    <string name="app_introduction">Rehapp is een app die u helpt bij het revalideren. Hieronder staat een korte uitleg over elk menu.</string>
+    <string name="app_introduction_text_1">Hier kunt u uw persoonlijke gegevens invoeren. Daarnaast kan u een trainingsprogramma kiezen en uw voortgang bekijken.</string>
+    <string name="app_introduction_text_2">Hier kunt u uw behaalde medailles bekijken, welke medailles u nog kan verdienen. Ook kan u hier de ranglijst van medailles bekijken. Op die manier kan u zich meten met andere gebruikers</string>
+    <string name="app_introduction_text_3">Hier kunt u verschillende instellingen wijzigen.</string>
+    <string name="app_introduction_text_4">Hier kunt u uw workouts en uw agenda bekijken. Verder kan u hier workouts, trainingen en testen invoeren. Dit is belangrijk omdat u hiermee uw voortgang in de gaten kan houden.</string>
+    <string name="app_introduction_text_5">Hier vindt u verschillende soorten informatie zoals een disclaimer, copyright en financiele aspecten. Daarnaast zal op deze pagina belangrijk relevant nieuws gedeeld worden.</string>
+    <string name="app_introduction_text_6">hier vindt u veelgestelde vragen en hulp bij het gebruiken van Rehapp.</string>
 
     <string name="introduction_header">Introductie</string>
     <string name="disclaimer_header">Disclaimer</string>
@@ -89,7 +92,6 @@
         rechten ontleend worden. (zie ook de disclaimer)De tekst is zorgvuldig
         samengesteld en het is de bedoeling dat er regelmatig updates verschijnen
         als er nieuwe ontwikkelingen in de training en/of in de literatuur zijn.
-
         Voor de samenstelling van deze applicatie is gebruikt gemaakt van
         verschillende bronnen met uiteenlopende levels of evidence. \n\n
 
@@ -99,48 +101,50 @@
         Wijzigingen en typefouten worden voorbehouden. Wij spannen ons
         in om de informatie op deze webpagina zo volledig en nauwkeurig
         mogelijk te laten zijn. \n
-        NAAM aanvaardt geen enkele verantwoordelijkheid voor schade op
+        Rehapp aanvaardt geen enkele verantwoordelijkheid voor schade op
         welke manier dan ook ontstaan door gebruik, onvolledigheid of
-        onjuistheid van de aangeboden informatie in deze applicatie
-    </string>
+        onjuistheid van de aangeboden informatie in deze applicatie.</string>
+    <string name="disclaimer">
+        Geen enkele informatie verstrekt door deze applicatie zal enige
+        vorm van garantie geven. Rehapp is niet aansprakelijk voor
+        ongewenste uitkomsten of effecten voortvloeiend uit de toegepaste
+        training. Daarnaast garandeert Rehapp geen enkel resultaat bij het
+        implementeren van de in deze applicatie voorgestelde training.
+        Rehapp kan niet aansprakelijk gesteld worden voor schade.
+        Link Disclaimer
+        Links zijn toegepast als informatieve bronnen. De meeste links zijn
+        externe links en worden derhalve niet onderhouden door Rehapp.
+        Deze links worden enkel aangeboden als extra service in de
+        applicatie. De inhoud van de gelinkte sites valt buiten de
+        verantwoordelijkheid van Rehapp.</string>
+    <string name="general">
+        De informatie in deze applicatie kan niet gebruikt worden ter
+        formulering van een diagnose of behandeling, of voor het
+        beargumenteren om medicatie te starten dan wel te stoppen,
+        zonder tussenkomst van een arts. De in deze applicatie
+        voorgestelde training kan nooit een vervanging zijn van een
+        revalidatie dan wel een onderzoek of diagnose door een arts. De
+        gebruiker is bewust van het feit dat de informatie in deze applicatie
+        niet compleet kan zijn. \n\n
+        Fouten en Veranderingen \n
+        De inhoud van de applicatie kan technische onjuistheden of
+        tikfouten bevatten. Dientengevolge is Rehapp niet aansprakelijk in
+        geval van fouten in de tekst, foto\'s of illustraties. Daarnaast kan
+        zonder melding de inhoud gewijzigd worden.</string>
+    <string name="financial">
+        De inhoud van deze applicatie is volledig onafhankelijk
+        samengesteld, zonder tussenkomst van een commercieel bedrijf.
+        De realisatie van de applicatie en het gratis aan de gebruiker
+        kunnen aanbieden is financieel mogelijk gemaakt door Rehapp.</string>
+    <string name="copyright">
+        Copyright is van toepassing op alle tekst, illustraties en foto’s in
+        deze applicatie. Copyright is ook van toepassing op het concept
+        van het training als toepassing voor de E-training. Het auteursrecht
+        op deze applicatie berust bij Rehapp of bij derden welke met
+        toestemming dit (beeld)materiaal beschikbaar hebben gesteld aan
+        Rehapp. Vermenigvuldiging in wat voor vorm dan ook is alleen
+        toegestaan na voorafgaande toestemming van Rehapp</string>
 
-    <string name="disclaimer">Geen enkele informatie verstrekt door deze applicatie zal enige
-vorm van garantie geven. NAAM is niet aansprakelijk voor
-ongewenste uitkomsten of effecten voortvloeiend uit de toegepaste
-training. Daarnaast garandeert NAAM geen enkel resultaat bij het
-implementeren van de in deze applicatie voorgestelde training.
-NAAM kan niet aansprakelijk gesteld worden voor schade.
-Link Disclaimer
-Links zijn toegepast als informatieve bronnen. De meeste links zijn
-externe links en worden derhalve niet onderhouden door NAAM.
-Deze links worden enkel aangeboden als extra service in de
-applicatie. De inhoud van de gelinkte sites valt buiten de
-verantwoordelijkheid van NAAM.</string>
-    <string name="general">Gebruikers verantwoordelijkheden
-De informatie in deze applicatie kan niet gebruikt worden ter
-formulering van een diagnose of behandeling, of voor het
-beargumenteren om medicatie te starten dan wel te stoppen,
-zonder tussenkomst van een arts. De in deze applicatie
-voorgestelde training kan nooit een vervanging zijn van een
-revalidatie dan wel een onderzoek of diagnose door een arts. De
-gebruiker is bewust van het feit dat de informatie in deze applicatie
-niet compleet kan zijn.
-Fouten en Veranderingen
-De inhoud van de applicatie kan technische onjuistheden of
-tikfouten bevatten. Dientengevolge is NAAM niet aansprakelijk in
-geval van fouten in de tekst, foto\'s of illustraties. Daarnaast kan
-zonder melding de inhoud gewijzigd worden.</string>
-    <string name="financial">De inhoud van deze applicatie is volledig onafhankelijk
-samengesteld, zonder tussenkomst van een commercieel bedrijf.
-De realisatie van de applicatie en het gratis aan de gebruiker
-kunnen aanbieden is financieel mogelijk gemaakt door Naam.</string>
-    <string name="copyright">Copyright is van toepassing op alle tekst, illustraties en foto’s in
-deze applicatie. Copyright is ook van toepassing op het concept
-van het training als toepassing voor de E-training. Het auteursrecht
-op deze applicatie berust bij NAAM of bij derden welke met
-toestemming dit (beeld)materiaal beschikbaar hebben gesteld aan
-NAAM. Vermenigvuldiging in wat voor vorm dan ook is alleen
-toegestaan na voorafgaande toestemming door NAAM</string>
     <string name="news">Op dit moment is er geen nieuws beschikbaar</string>
     <string name="reminder_preference">Herinneringen</string>
     <string name="reminder_preference_summary">Deze optie zorgt ervoor dat u herinneringen ontvangt over uw workouts.</string>
@@ -160,4 +164,9 @@ toegestaan na voorafgaande toestemming door NAAM</string>
     <string name="open_progres_menu_button">Voortgang tonen</string>
     <string name="open_test_menu_button">Test invoeren</string>
     <string name="open_training_program_menu_button">Trainingsprogramma aanpassen</string>
+    <string name="leaderboard_subtitle">Top 10</string>
+    <string name="remove_training">Trainingen verwijderen</string>
+    <string name="remove_training_summary">Hiermee verwijdert u uw trainingen</string>
+    <string name="remove_tests">Tests verwijderen</string>
+    <string name="remove_tests_summary">Hiermee verwijdert u uw tests</string>
 </resources>

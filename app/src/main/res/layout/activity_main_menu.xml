@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="25dp"
             android:id="@+id/my_training_button"
-            android:background="@drawable/my_training"
+            android:background="@drawable/my_workouts"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
             android:onClick="open_my_training"/>

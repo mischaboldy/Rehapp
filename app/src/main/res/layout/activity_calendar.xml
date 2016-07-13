@@ -17,6 +17,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Op dit moment kan u hier nog niks, in de toekomst kunt u hier uw trainingsprogramma kunnen zien"/>
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Op dit moment kan u hier nog niks, in de toekomst kunt u hier uw trainingsprogramma bekijken"/>
 </LinearLayout>

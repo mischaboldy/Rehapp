@@ -69,7 +69,6 @@ public class Help extends AppCompatActivity {
         listDataHeader.add(getResources().getString(R.string.question2));
         listDataHeader.add(getResources().getString(R.string.question3));
         listDataHeader.add(getResources().getString(R.string.question4));
-        listDataHeader.add(getResources().getString(R.string.question5));
 
         // Adding child data
         List<String> answer1 = new ArrayList<String>();
@@ -84,14 +83,11 @@ public class Help extends AppCompatActivity {
         List<String> answer4 = new ArrayList<String>();
         answer4.add(getResources().getString(R.string.answer4));
 
-        List<String> answer5 = new ArrayList<String>();
-        answer5.add(getResources().getString(R.string.answer5));
 
         listDataChild.put(listDataHeader.get(0), answer1); // Header, Child data
         listDataChild.put(listDataHeader.get(1), answer2);
         listDataChild.put(listDataHeader.get(2), answer3);
         listDataChild.put(listDataHeader.get(3), answer4);
-        listDataChild.put(listDataHeader.get(4), answer5);
 
     }
 

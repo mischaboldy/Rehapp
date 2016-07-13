@@ -10,10 +10,11 @@
     android:layout_height="wrap_content"/>
 
     <ListView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/medals_list_view"
         android:dividerHeight="20sp"
+        android:paddingTop="10dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:background="@color/white"

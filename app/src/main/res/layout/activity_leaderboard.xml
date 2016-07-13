@@ -3,18 +3,27 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1">
+    android:background="@color/white">
 
     <include
         layout="@layout/toolbar_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/leaderboard_subtitle"
+        android:id="@+id/leaderboard_subtitle"
+        android:textSize="35sp"
+        android:textColor="@color/blueTop"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"/>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/workout_list_view"
+        android:id="@+id/leaderboards_list_view"
         android:dividerHeight="20sp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
@@ -24,13 +33,4 @@
         android:divider="@color/white"
         android:scrollbarStyle="outsideInset"/>
 
-    <TextView
-        android:id="@+id/empty_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="U heeft nog geen workouts ingevoerd."
-        android:textSize="18sp"
-        android:textColor="@color/blueTop"
-        android:layout_gravity="center"
-        android:layout_marginTop="250dp"/>
 </LinearLayout>

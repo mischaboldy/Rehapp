@@ -16,16 +16,13 @@
     <Preference android:title="@string/remove_workouts"
         android:key="removeWorkouts"
         android:summary="@string/remove_workouts_summary"/>
-</PreferenceScreen>
 
-<!--<EditTextPreference-->
-<!--android:title="Your Name"-->
-<!--android:key="username"-->
-<!--android:summary="Please provide your username"></EditTextPreference>-->
-<!--<ListPreference-->
-<!--android:title="Download Details"-->
-<!--android:summary="Select the kind of data that you would like to download"-->
-<!--android:key="downloadType"-->
-<!--android:defaultValue="1"-->
-<!--android:entries="@array/listArray"-->
-<!--android:entryValues="@array/listValues" />-->
+    <Preference android:title="@string/remove_training"
+        android:key="removeTraining"
+        android:summary="@string/remove_training_summary"/>
+
+
+    <Preference android:title="@string/remove_tests"
+        android:key="removeTests"
+        android:summary="@string/remove_tests_summary"/>
+</PreferenceScreen>

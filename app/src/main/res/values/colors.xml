@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#80004FA2</color>
     <color name="blueTop">#004FA2</color>
     <color name="blueBottom">#80004FA2</color>
     <color name="white">#FFFFFF</color>
@@ -15,10 +15,10 @@
     <color name="blue">#1B08F7</color>
 
     <color name="fadedRed">#1AFF7700</color>
-    <color name="fadedGreen">#1A138D23</color>
+    <color name="fadedGreen">#4D5BF708</color>
     <color name="offWhite">#FAFAFA</color>
-    <color name="cursorAccent">#ED1C24</color>
-    <color name="controlNormal">#ED1C24</color>
-    <color name="controlActivated">#ED1C24</color>
+    <color name="cursorAccent">#004FA2</color>
+    <color name="controlNormal">#000000</color>
+    <color name="controlActivated">#5BF708 </color>
 </resources>
 

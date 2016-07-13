@@ -29,10 +29,6 @@ public class AppIntroduction extends AppCompatActivity {
         appTitle.setText(R.string.app_name);
         Typeface titleTypeFace = Typeface.createFromAsset(getAssets(), "fonts/KeepCalm-Medium.ttf");
         appTitle.setTypeface(titleTypeFace);
-
-        //temporary fix to not show introduction:
-        Intent intent = new Intent(this, MainMenu.class);
-        startActivity(intent);
     }
 
 

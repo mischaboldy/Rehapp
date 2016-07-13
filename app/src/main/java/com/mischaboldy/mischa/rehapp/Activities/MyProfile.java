@@ -27,6 +27,8 @@ import android.widget.Toast;
 import com.mischaboldy.mischa.rehapp.AchievementTracker;
 import com.mischaboldy.mischa.rehapp.R;
 
+import java.util.Calendar;
+
 /**
  * Created by mischa on 27/06/16.
  */
@@ -113,9 +115,9 @@ public class MyProfile extends AppCompatActivity {
             }
             SharedPreferences sharedPrefs = getPreferenceManager().getSharedPreferences();
             String additive = "";
-            if (key.equals("weight") && sharedPrefs.getString(key, "Default") != ""){additive = " KG";}
-            if (key.equals("height") && sharedPrefs.getString(key, "Default") != ""){additive = " M";}
-            preference.setSummary(sharedPrefs.getString(key, "Default") + additive);
+            if (key.equals("weight") && sharedPrefs.getString(key, "") != ""){additive = " KG";}
+            if (key.equals("height") && sharedPrefs.getString(key, "") != ""){additive = " M";}
+            preference.setSummary(sharedPrefs.getString(key, "") + additive);
         }
 
     }

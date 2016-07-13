@@ -3,10 +3,9 @@
 
     <item
         android:state_pressed="true"
-        android:drawable="@drawable/remove_blue" />
+        android:drawable="@drawable/remove_white" />
 
     <item
         android:state_focused="false"
-        android:drawable="@drawable/remove_white" />
-
+        android:drawable="@drawable/remove_red" />
 </selector>

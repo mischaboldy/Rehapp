@@ -74,6 +74,9 @@ public class MyWorkouts extends AppCompatActivity{
         ListView listView = (ListView) findViewById(R.id.workout_list_view);
 
         listView.setAdapter(listAdapter);
+
+        TextView emptyText = (TextView)findViewById(R.id.empty_text);
+        listView.setEmptyView(emptyText);
     }
 
         @Override
