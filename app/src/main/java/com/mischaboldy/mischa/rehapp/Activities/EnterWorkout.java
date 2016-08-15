@@ -38,7 +38,7 @@ public class EnterWorkout extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         TextView appTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
-        appTitle.setText(R.string.input_workout_title);
+        appTitle.setText(R.string.enter_workout_title);
         Typeface titleTypeFace = Typeface.createFromAsset(getAssets(), "fonts/KeepCalm-Medium.ttf");
         appTitle.setTypeface(titleTypeFace);
 

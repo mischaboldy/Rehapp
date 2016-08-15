@@ -13,6 +13,12 @@ import com.mischaboldy.mischa.rehapp.R;
 
 public class MainMenu extends AppCompatActivity {
 
+    //to do: beginnen met test invoeren! -> trainingsgegevens herleiden en een advies geven voor trainingsprogramma.
+    // workout: starten borgscore eerst, timer lopen, zien wie er aan het sporten zijn LIVE updates -> eindigen weer borgscore. en toevoegen aan lijst.
+    // informatie icoontjes in menubalk met dialogs per scherm.
+    // mainmenu aanpassen naar menu in menubalk, startpagina veranderen naar -> mijn workouts en voortgang!
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

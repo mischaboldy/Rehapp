@@ -34,7 +34,7 @@ public class Settings extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         TextView appTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
-        appTitle.setText(R.string.info_title);
+        appTitle.setText(R.string.settings_title);
         Typeface titleTypeFace = Typeface.createFromAsset(getAssets(), "fonts/KeepCalm-Medium.ttf");
         appTitle.setTypeface(titleTypeFace);
 

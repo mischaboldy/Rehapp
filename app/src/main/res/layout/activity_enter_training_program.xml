@@ -198,7 +198,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
-        android:text="Trainginsprogramma opslaan"
+        android:text="Trainingsprogramma opslaan"
         android:id="@+id/save_training_button"
         android:onClick="saveTrainingProgram"
         android:textColor="#fff" />

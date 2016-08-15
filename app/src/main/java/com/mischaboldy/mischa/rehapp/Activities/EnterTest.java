@@ -70,7 +70,7 @@ public class EnterTest extends AppCompatActivity {
         TextView testInfoTextView = (TextView) findViewById(R.id.title_test_info_form_text_view);
 
         TextView appTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
-        appTitle.setText(R.string.my_profile_title);
+        appTitle.setText(R.string.enter_test_title);
         Typeface titleTypeFace = Typeface.createFromAsset(getAssets(), "fonts/KeepCalm-Medium.ttf");
         appTitle.setTypeface(titleTypeFace);
         testInfoTextView.setTypeface(titleTypeFace);

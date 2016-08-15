@@ -4,7 +4,7 @@
     android:title="Gebruikersnaam"
     android:key="name"></EditTextPreference>
     <EditTextPreference
-        android:title="Date of birth"
+        android:title="Geboortedatum"
         android:key="dob"
         android:inputType="date"></EditTextPreference>
     <ListPreference

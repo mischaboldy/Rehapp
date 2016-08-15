@@ -39,7 +39,7 @@ public class EnterTraining extends AppCompatActivity {
         TextView trainingInfoTextView = (TextView) findViewById(R.id.title_training_info_form_text_view);
 
         TextView appTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
-        appTitle.setText(R.string.input_training_title);
+        appTitle.setText(R.string.enter_training_title);
         Typeface titleTypeFace = Typeface.createFromAsset(getAssets(), "fonts/KeepCalm-Medium.ttf");
         appTitle.setTypeface(titleTypeFace);
         trainingInfoTextView.setTypeface(titleTypeFace);

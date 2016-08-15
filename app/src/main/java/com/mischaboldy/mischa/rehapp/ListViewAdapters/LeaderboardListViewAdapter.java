@@ -58,7 +58,7 @@ public class LeaderboardListViewAdapter extends ArrayAdapter<Users> {
         Typeface titleTypeFace = Typeface.createFromAsset(theView.getContext().getAssets(), "fonts/KeepCalm-Medium.ttf");
         usernameTextView.setTypeface(titleTypeFace);
 
-        medalsTextView.setText(leaderList.get(position).getMedals() + "medailles verdiend" );
+        medalsTextView.setText(leaderList.get(position).getMedals() + " medailles verdiend" );
         return theView;
     }
 }
