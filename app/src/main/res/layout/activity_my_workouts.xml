@@ -13,21 +13,31 @@
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="475dp"
         android:id="@+id/workout_list_view"
         android:dividerHeight="20sp"
         android:paddingTop="10dp"
-        android:paddingBottom="10dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:background="@color/white"
         android:divider="@color/white"
         android:scrollbarStyle="outsideInset"/>
 
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/blueTop"
+        android:text="Workout invoeren"
+        android:id="@+id/save_training_button"
+        android:onClick="enterWorkout"
+        android:textColor="#fff" />
+
     <TextView
         android:id="@+id/empty_text"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="475dp"
         android:text="U heeft nog geen workouts ingevoerd."
         android:textSize="18sp"
         android:textColor="@color/blueTop"

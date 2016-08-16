@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activities.MainMenu"
+            android:name=".Activities.MainView"
             android:label="@string/title_activity_my_training"
             android:parentActivityName=".Activities.AppIntroduction"
             android:theme="@style/AppTheme">
@@ -32,56 +32,56 @@
         <activity
             android:name=".Activities.MyProfile"
             android:label="@string/my_profile_title"
-            android:parentActivityName=".Activities.MainMenu"
+            android:parentActivityName=".Activities.MainView"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Activities.MainMenu" />
+                android:value=".Activities.MainView" />
         </activity>
         <activity
-            android:name=".Activities.MyMedals"
-            android:label="@string/my_medals_title"
-            android:parentActivityName=".Activities.MainMenu"
+            android:name=".Activities.MyLevel"
+            android:label="@string/my_level_title"
+            android:parentActivityName=".Activities.MainView"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Activities.MainMenu" />
+                android:value=".Activities.MainView" />
         </activity>
         <activity
             android:name=".Activities.Settings"
             android:label="@string/settings_title"
-            android:parentActivityName=".Activities.MainMenu"
+            android:parentActivityName=".Activities.MainView"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Activities.MainMenu" />
+                android:value=".Activities.MainView" />
         </activity>
         <activity
             android:name=".Activities.MyWorkouts"
             android:label="@string/info_title"
-            android:parentActivityName=".Activities.MainMenu"
+            android:parentActivityName=".Activities.MainView"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Activities.MainMenu" />
+                android:value=".Activities.MainView" />
         </activity>
         <activity
             android:name=".Activities.Info"
             android:label="@string/info_title"
-            android:parentActivityName=".Activities.MainMenu"
+            android:parentActivityName=".Activities.MainView"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Activities.MainMenu" />
+                android:value=".Activities.MainView" />
         </activity>
         <activity
             android:name=".Activities.Help"
             android:label="@string/help_title"
-            android:parentActivityName=".Activities.MainMenu"
+            android:parentActivityName=".Activities.MainView"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Activities.MainMenu" />
+                android:value=".Activities.MainView" />
         </activity>
 
         <activity
@@ -92,26 +92,6 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Activities.MyProfile" />
-        </activity>
-        <activity
-            android:name=".Activities.ShowProgress"
-            android:label="@string/show_progress_title"
-            android:parentActivityName=".Activities.MyProfile"
-            android:theme="@style/AppTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Activities.MyProfile" />
-        </activity>
-
-
-        <activity
-            android:name=".Activities.Leaderboard"
-            android:label="@string/info_title"
-            android:parentActivityName=".Activities.MyMedals"
-            android:theme="@style/AppTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Activities.MyMedals" />
         </activity>
 
 
@@ -145,14 +125,44 @@
                 android:value=".Activities.MyProfile" />
         </activity>
         <activity
-            android:name=".Activities.EnterTraining"
+            android:name=".Activities.EnterTrainingProgram"
             android:label="@string/info_title"
-            android:parentActivityName=".Activities.MyMedals"
+            android:parentActivityName=".Activities.MyLevel"
             android:theme="@style/AppTheme"
             android:noHistory="true">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Activities.MyProfile" />
+        </activity>
+        <activity
+            android:name=".Activities.SuggestTrainingProgram"
+            android:label="@string/info_title"
+            android:parentActivityName=".Activities.EnterTest"
+            android:theme="@style/AppTheme"
+            android:noHistory="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.EnterTest" />
+        </activity>
+        <activity
+            android:name=".Activities.RegisterWorkout"
+            android:label="@string/info_title"
+            android:parentActivityName=".Activities.EnterWorkout"
+            android:theme="@style/AppTheme"
+            android:noHistory="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.EnterWorkout" />
+        </activity>
+        <activity
+            android:name=".Activities.SaveWorkout"
+            android:label="@string/info_title"
+            android:parentActivityName=".Activities.RegisterWorkout"
+            android:theme="@style/AppTheme"
+            android:noHistory="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.RegisterWorkout" />
         </activity>
     </application>
 </manifest>

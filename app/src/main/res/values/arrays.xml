@@ -34,14 +34,7 @@
         <item>1uur &amp; 45 minuten</item>
         <item>1uur &amp; 60 minuten</item>
     </string-array>
-
-
-    <string-array name="test_type_spinner">
-        <item>Fietstest</item>
-        <item>6 Minuten wandeltest</item>
-        <item>Shuttle wandeltest</item>
-    </string-array>
-
+    
     <string-array name="sex_options">
         <item>man</item>
         <item>vrouw</item>
@@ -73,5 +66,17 @@
         <item>1</item>
         <item>2</item>
         <item>3</item>
+    </string-array>
+
+    <string-array name="MenuItems">
+        <item>Overzicht</item>
+        <item>Mijn profiel</item>
+        <item>Mijn niveau</item>
+        <item>Mijn workouts</item>
+        <item>Agenda</item>
+        <item>Trainingsprogramma</item>
+        <item>Instellingen </item>
+        <item>Extra informatie </item>
+        <item>Help </item>
     </string-array>
 </resources>

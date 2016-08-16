@@ -5,6 +5,7 @@
     <string name="title_activity_my_training_schedule">MyTrainingSchedule</string>
     <string name="title_input_workout">Workout toevoegen</string>
     <string name="title_training_program">Trainingsprogramma</string>
+    <string name="title_main_view">Overzicht</string>
 
     <string name="select_training_type_text">Selecteer minimaal een trainingstype:</string>
     <string name="select_training_intensity_text">Kies uw trainingsintensiteit:</string>
@@ -19,14 +20,14 @@
     <string name="save_workout_button_text">Workout opslaan</string>
     <string name="select_workout_duration_text">Selecteer de duur van uw workout:</string>
     <string name="select_workout_training_text">Selecteer een workout:</string>
-    <string name="select_borgschale_text">Geef belasting op de Borgschaal aan:</string>
-    <string name="workout_row_text">Workoutduur: \nBorgscore: \nDatum: </string>
+    <string name="select_borgschale_text">Geef aan op de borgschaal hou u zich op dit moment voelt:</string>
+    <string name="workout_row_text">Workoutduur: \nBorgscore voor: \nBorgscore na:\nDatum: </string>
     <string name="title_profile_form_text_view">Profiel informatie</string>
     <string name="name_input_text">Naam</string>
     <string name="save_profile_button_text">Profiel opslaan</string>
     <string name="my_profile_title">Mijn profiel</string>
     <string name="my_workouts_title">Mijn workouts</string>
-    <string name="my_medals_title">Mijn medailles</string>
+    <string name="my_level_title">Mijn niveau</string>
     <string name="date_of_birth_edit_text">Geboorte datum</string>
     <string name="weight_edit_text">Gewicht (kg)</string>
     <string name="height_edit_text">Lengte (m)</string>
@@ -35,16 +36,13 @@
     <string name="title_training_info_form_text_view">Trainingsgegevens</string>
     <string name="heart_fq_rest_edit_text">Hartfrequentie rust (sl/min)</string>
     <string name="heart_fq_max_edit_text">Hartfrequentie maximaal (sl/min)</string>
-    <string name="blood_pressure_res_edit_text">Bloeddruk rust (mmHg)</string>
-    <string name="blood_pressure_max_edit_text">Bloeddruk max (mmHg)</string>
-    <string name="blood_sugar_edit_text">Bloedsuikers (mmol/L)</string>
-    <string name="sao2_input_edit_text">SaO2 (%)</string>
-    <string name="save_trainings_info_button_text">Trainingsgegevens opslaan</string>
+    <string name="heart_fq_rec_edit_text">Hartfrequentie herstel (sl/min)</string>
+    <string name="save_test_info_button_text">Testgegevens opslaan</string>
     <string name="title_test_info_form_text_view">Testgegevens</string>
     <string name="shuttle_edit_text">Shuttle wandeltest (level)</string>
     <string name="six_minute_edit_text">6 Minuten wandeltest (m)</string>
     <string name="walk_test_title">Looptest:</string>
-    <string name="enter_workout_title">Workout toevoegen</string>
+    <string name="enter_workout_title">Workout invoeren</string>
     <string name="show_progress_title">Voortgang</string>
     <string name="enter_training_title">Training invoeren</string>
     <string name="max_watt_edit_text">Maximale wattage (w)</string>
@@ -52,11 +50,11 @@
     <string name="MET_edit_text">MET\'s</string>
     <string name="speed_edit_text">Snelheid</string>
     <string name="shuttle_level_edit_text">Level</string>
-    <string name="six_minute_meter_edit_text">Meter</string>
+    <string name="six_minute_meter_edit_text">Afstand (in meters)</string>
     <string name="settings_title">Instellingen</string>
     <string name="help_title">Help</string>
     <string name="info_title">Extra informatie</string>
-    <string name="see_medal">Medaille tonen</string>
+    <string name="see_experience">Punten tonen</string>
     <string name="question1">Hoe werkt Rehapp</string>
     <string name="question2">Wat kan Rehapp voor mij doen?</string>
     <string name="question3">Waar kan ik terecht voor vragen over Rehapp?</string>
@@ -68,13 +66,8 @@
     <string name="try_again_toast_text">Op dit moment is helaas niemand bereikbaar, probeert u het later nog eens</string>
 
     <string name="app_introduction_title">Welkom bij Rehapp</string>
-    <string name="app_introduction">Rehapp is een app die u helpt bij het revalideren. Hieronder staat een korte uitleg over elk menu.</string>
-    <string name="app_introduction_text_1">Hier kunt u uw persoonlijke gegevens invoeren. Daarnaast kan u een trainingsprogramma kiezen en uw voortgang bekijken.</string>
-    <string name="app_introduction_text_2">Hier kunt u uw behaalde medailles bekijken, welke medailles u nog kan verdienen. Ook kan u hier de ranglijst van medailles bekijken. Op die manier kan u zich meten met andere gebruikers</string>
-    <string name="app_introduction_text_3">Hier kunt u verschillende instellingen wijzigen.</string>
-    <string name="app_introduction_text_4">Hier kunt u uw workouts en uw agenda bekijken. Verder kan u hier workouts, trainingen en testen invoeren. Dit is belangrijk omdat u hiermee uw voortgang in de gaten kan houden.</string>
-    <string name="app_introduction_text_5">Hier vindt u verschillende soorten informatie zoals een disclaimer, copyright en financiele aspecten. Daarnaast zal op deze pagina belangrijk relevant nieuws gedeeld worden.</string>
-    <string name="app_introduction_text_6">hier vindt u veelgestelde vragen en hulp bij het gebruiken van Rehapp.</string>
+    <string name="app_introduction_pt1">Rehapp is een app die u helpt bij het revalideren. Met deze app kunt u uw beweging inplannen en bijhouden. Daarnaast kunt u beloningen verdienen zolang u op het juiste spoor blijft.</string>
+    <string name="app_introduction_pt2">Wanneer u een vraag heeft of iets niet begrijpt, klik dan op het informatie icoontje rechts bovenin het scherm. </string>
 
     <string name="introduction_header">Introductie</string>
     <string name="disclaimer_header">Disclaimer</string>
@@ -170,4 +163,11 @@
     <string name="remove_tests">Tests verwijderen</string>
     <string name="remove_tests_summary">Hiermee verwijdert u uw tests</string>
     <string name="enter_test_title">Testgegevens</string>
+    <string name="drawer_open">a</string>
+    <string name="drawer_close">b</string>
+    <string name="no_chart_data_text_1">U heeft nog geen workouts ingevoerd.</string>
+    <string name="no_chart_data_text_2">Dat kunt u doen in \'Mijn workouts\' in het slidemenu.</string>
+    <string name="title_suggest_training_program">Programma voorstel</string>
+    <string name="register_workout_title">Workout</string>
+    <string name="save_workout_title">Workout</string>
 </resources>

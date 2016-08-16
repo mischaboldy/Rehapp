@@ -41,12 +41,13 @@ public class WorkoutListViewAdapter extends ArrayAdapter<String> {
         final Integer id = Integer.parseInt(workoutArray[0]);
         String workout_type = workoutArray[1] + "_bare";
         String duration = workoutArray[2] + " minuten";
-        String borgValue = workoutArray[3];
+        String borgValueStart = workoutArray[3];
+        String borgValueEnd = workoutArray[4];
 
         Date date = null;
         SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
         try {
-            date = fmt.parse(workoutArray[4]);
+            date = fmt.parse(workoutArray[5]);
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -54,7 +55,7 @@ public class WorkoutListViewAdapter extends ArrayAdapter<String> {
         SimpleDateFormat fmtOut = new SimpleDateFormat("dd-MM-yyyy");
 
         String dateString = fmtOut.format(date);
-        String workoutText = duration + "\n" + borgValue + "\n" + dateString;
+        String workoutText = duration + "\n" + borgValueStart + "\n" + borgValueEnd + "\n" + dateString;
 
         TextView workoutRowTextView = (TextView)theView.findViewById(R.id.workout_row_text_view);
         ImageView workoutRoWImageView = (ImageView) theView.findViewById(R.id.workout_row_image_view);

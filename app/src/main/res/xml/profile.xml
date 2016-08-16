@@ -20,8 +20,4 @@
         android:title="Lengte"
         android:key="height"
         android:inputType="numberDecimal"></EditTextPreference>
-    <Preference android:title="@string/open_training_program_menu_button"
-        android:key="openTrainingProgram"/>
-    <Preference android:title="@string/open_progres_menu_button"
-        android:key="openProgress"/>
 </PreferenceScreen>

@@ -51,12 +51,11 @@ public class DatabaseHelper {
                     "blood_sugar integer, sao2 integer, dt datetime default current_timestamp)");
 
             rehappDB.execSQL("CREATE TABLE IF NOT EXISTS test " +
-                    "(id integer primary key, test_type integer, max_watt integer, meter integer, " +
-                    "level integer, speed time, MET float, vo2max integer, borgvalue integer, " +
+                    "(id integer primary key, meter integer, heartfqrest integer, heartfqmax integer, heartfqrec integer " +
                     "dt datetime default current_timestamp)");
 
             rehappDB.execSQL("CREATE TABLE IF NOT EXISTS workouts " +
-                    "(id integer primary key, workout VARCHAR, duration integer, borgvalue integer, " +
+                    "(id integer primary key, workout VARCHAR, duration string, borgvalue_start integer, borgvalue_end integer, " +
                     "dt datetime default current_timestamp)");
 
         }
@@ -71,6 +70,12 @@ public class DatabaseHelper {
     }
 
     public static void insertIntoDatabase(String query){
-        rehappDB.execSQL(query);
+
+        try{
+            rehappDB.execSQL(query);
+        }
+        catch (Exception e) {
+            Log.e("CONTACTS ERROR", "Error inputting training");
+        }
     }
 }

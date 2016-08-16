@@ -1,10 +1,6 @@
 package com.mischaboldy.mischa.rehapp.Activities;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.preference.ListPreference;
@@ -13,21 +9,12 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceGroup;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.SeekBar;
-import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.mischaboldy.mischa.rehapp.AchievementTracker;
+import com.mischaboldy.mischa.rehapp.InfoBoxHelper;
 import com.mischaboldy.mischa.rehapp.R;
-
-import java.util.Calendar;
 
 /**
  * Created by mischa on 27/06/16.
@@ -56,6 +43,21 @@ public class MyProfile extends AppCompatActivity {
                 new MyProfileFragment()).commit();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_help, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if(item.getItemId() == R.id.help_button){
+            InfoBoxHelper.openBox(this, "myProfile");
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     public static class MyProfileFragment extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener {
         @Override
         public void onCreate(final Bundle savedInstanceState)
@@ -63,26 +65,6 @@ public class MyProfile extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.profile);
             getPreferenceScreen().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
-
-            Preference openTrainingProgramButton = findPreference("openTrainingProgram");
-            openTrainingProgramButton.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-                @Override
-                public boolean onPreferenceClick(Preference preference) {
-                    Intent intent = new Intent(MyProfileFragment.this.getActivity(), TrainingProgram.class);
-                    startActivity(intent);
-                    return true;
-                }
-            });
-
-            Preference openProgressButton = findPreference("openProgress");
-            openProgressButton.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-                @Override
-                public boolean onPreferenceClick(Preference preference) {
-                    Intent intent = new Intent(MyProfileFragment.this.getActivity(), ShowProgress.class);
-                    startActivity(intent);
-                    return true;
-                }
-            });
         }
 
         @Override

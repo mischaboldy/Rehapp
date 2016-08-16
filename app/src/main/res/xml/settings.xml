@@ -5,24 +5,24 @@
         android:defaultValue="false"
         android:summary="@string/reminder_preference_summary"
         android:key="reminderPreference" />
-    <Preference android:title="@string/remove_medals"
-        android:key="removeMedals"
-        android:summary="@string/remove_medals_summary"/>
+    <!--<Preference android:title="@string/remove_medals"-->
+        <!--android:key="removeMedals"-->
+        <!--android:summary="@string/remove_medals_summary"/>-->
 
-    <Preference android:title="@string/remove_profile"
-        android:key="removeProfile"
-        android:summary="@string/remove_profile_summary"/>
+    <!--<Preference android:title="@string/remove_profile"-->
+        <!--android:key="removeProfile"-->
+        <!--android:summary="@string/remove_profile_summary"/>-->
 
-    <Preference android:title="@string/remove_workouts"
-        android:key="removeWorkouts"
-        android:summary="@string/remove_workouts_summary"/>
+    <!--<Preference android:title="@string/remove_workouts"-->
+        <!--android:key="removeWorkouts"-->
+        <!--android:summary="@string/remove_workouts_summary"/>-->
 
-    <Preference android:title="@string/remove_training"
-        android:key="removeTraining"
-        android:summary="@string/remove_training_summary"/>
+    <!--<Preference android:title="@string/remove_training"-->
+        <!--android:key="removeTraining"-->
+        <!--android:summary="@string/remove_training_summary"/>-->
 
 
-    <Preference android:title="@string/remove_tests"
-        android:key="removeTests"
-        android:summary="@string/remove_tests_summary"/>
+    <!--<Preference android:title="@string/remove_tests"-->
+        <!--android:key="removeTests"-->
+        <!--android:summary="@string/remove_tests_summary"/>-->
 </PreferenceScreen>

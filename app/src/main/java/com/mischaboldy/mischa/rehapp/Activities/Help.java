@@ -4,12 +4,15 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mischaboldy.mischa.rehapp.AchievementTracker;
+import com.mischaboldy.mischa.rehapp.ExperienceTracker;
+import com.mischaboldy.mischa.rehapp.InfoBoxHelper;
 import com.mischaboldy.mischa.rehapp.ListViewAdapters.ExpandableListAdapter;
 import com.mischaboldy.mischa.rehapp.R;
 
@@ -32,7 +35,7 @@ public class Help extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
 
-        AchievementTracker.trackAchievement(this, "help");
+//        ExperienceTracker.trackAchievement(this, "help");
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -55,6 +58,21 @@ public class Help extends AppCompatActivity {
 
         // setting list adapter
         expListView.setAdapter(listAdapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_help, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if(item.getItemId() == R.id.help_button){
+            InfoBoxHelper.openBox(this, "help");
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     /*

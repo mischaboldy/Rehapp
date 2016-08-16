@@ -1,28 +1,34 @@
 package com.mischaboldy.mischa.rehapp.Activities;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.CheckBox;
-import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.mischaboldy.mischa.rehapp.DatabaseHelper;
+import com.mischaboldy.mischa.rehapp.Fragments.ProgramEnteredFragment;
+import com.mischaboldy.mischa.rehapp.Fragments.ProgramNotEnteredFragment;
+import com.mischaboldy.mischa.rehapp.InfoBoxHelper;
 import com.mischaboldy.mischa.rehapp.R;
+
+import java.util.ArrayList;
 
 
 public class TrainingProgram extends AppCompatActivity {
 
-    public static final String PREFS_NAME = "TrainingProgramPrefsFile";
+//    public static final String PREFS_NAME = "TrainingProgramPrefsFile";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        SharedPreferences TrainingProgramPreferences = getSharedPreferences(PREFS_NAME, 0);
-        setContentView(R.layout.activity_enter_training_program);
+        setContentView(R.layout.activity_training_program);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
@@ -36,84 +42,42 @@ public class TrainingProgram extends AppCompatActivity {
         Typeface titleTypeFace = Typeface.createFromAsset(getAssets(), "fonts/KeepCalm-Medium.ttf");
         appTitle.setTypeface(titleTypeFace);
 
-        CheckBox cycle = (CheckBox) findViewById(R.id.cycle_button);
-        CheckBox walk = (CheckBox) findViewById(R.id.walk_button);
-        CheckBox cardio = (CheckBox) findViewById(R.id.cardio_button);
-        CheckBox hometrainer = (CheckBox) findViewById(R.id.hometrainer_button);
-        CheckBox jog = (CheckBox) findViewById(R.id.jog_button);
-        CheckBox nordicWalking = (CheckBox) findViewById(R.id.nordic_walking_button);
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        Spinner intensityTypeSpinner = (Spinner) findViewById(R.id.intensity_type_spinner);
-        Spinner intensityAmountSpinner = (Spinner) findViewById(R.id.intensity_amount_spinner);
-        Spinner workoutAmountSpinner = (Spinner) findViewById(R.id.workout_amount_spinner);
+        ArrayList<String> testTypeData = DatabaseHelper.getTrainingData(this, "meter", "test");
 
-        boolean cycleChecked = TrainingProgramPreferences.getBoolean("cycle", false);
-        boolean walkChecked = TrainingProgramPreferences.getBoolean("walk", false);
-        boolean cardioChecked = TrainingProgramPreferences.getBoolean("cardio", false);
-        boolean hometrainerChecked = TrainingProgramPreferences.getBoolean("hometrainer", false);
-        boolean jogChecked = TrainingProgramPreferences.getBoolean("jog", false);
-        boolean nordicWalkingChecked = TrainingProgramPreferences.getBoolean("nordicWalking", false);
-        String intensityType = TrainingProgramPreferences.getString("intensityType", "pre-training");
-        String intensityAmount = TrainingProgramPreferences.getString("intensityAmount", "laag");
-        String numberOfWorkouts = TrainingProgramPreferences.getString("numberOfWorkouts", "1 keer per week");
-
-        intensityTypeSpinner.setSelection(getIndex(intensityTypeSpinner, intensityType));
-        intensityAmountSpinner.setSelection(getIndex(intensityAmountSpinner, intensityAmount));
-        workoutAmountSpinner.setSelection(getIndex(workoutAmountSpinner, numberOfWorkouts));
-
-        cycle.setChecked(cycleChecked);
-        walk.setChecked(walkChecked);
-        cardio.setChecked(cardioChecked);
-        hometrainer.setChecked(hometrainerChecked);
-        jog.setChecked(jogChecked);
-        nordicWalking.setChecked(nordicWalkingChecked);
-    }
-
-    private int getIndex(Spinner spinner, String myString)
-    {
-        int index = 0;
-
-        for (int i=0;i<spinner.getCount();i++){
-            if (spinner.getItemAtPosition(i).toString().equalsIgnoreCase(myString)){
-                index = i;
-                break;
-            }
+        if (testTypeData.size() > 0) {
+            ProgramEnteredFragment fragment = new ProgramEnteredFragment();
+            fragmentTransaction.replace(R.id.program_info_fragment, fragment).commit();
+        } else {
+            ProgramNotEnteredFragment fragment = new ProgramNotEnteredFragment();
+            fragmentTransaction.replace(R.id.program_info_fragment, fragment).commit();
         }
-        return index;
     }
 
-    public void saveTrainingProgram(View view) {
-        SharedPreferences trainingPreferences = getSharedPreferences(PREFS_NAME, 0);
-        SharedPreferences.Editor editor = trainingPreferences.edit();
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_help, menu);
+        return true;
+    }
 
-        CheckBox cycle = (CheckBox) findViewById(R.id.cycle_button);
-        CheckBox walk = (CheckBox) findViewById(R.id.walk_button);
-        CheckBox cardio = (CheckBox) findViewById(R.id.cardio_button);
-        CheckBox hometrainer = (CheckBox) findViewById(R.id.hometrainer_button);
-        CheckBox jog = (CheckBox) findViewById(R.id.jog_button);
-        CheckBox nordicWalking = (CheckBox) findViewById(R.id.nordic_walking_button);
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
 
-        Spinner intensityTypeSpinner = (Spinner) findViewById(R.id.intensity_type_spinner);
-        Spinner intensityAmountSpinner = (Spinner) findViewById(R.id.intensity_amount_spinner);
-        Spinner trainingAmountSpinner = (Spinner) findViewById(R.id.workout_amount_spinner);
+        if(item.getItemId() == R.id.help_button){
+            InfoBoxHelper.openBox(this, "trainingprogram");
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
-        String intensityType = intensityTypeSpinner.getSelectedItem().toString();
-        String intensityAmount = intensityAmountSpinner.getSelectedItem().toString();
-        String numberOfWorkouts = trainingAmountSpinner.getSelectedItem().toString();
+    public void enterTest(View view) {
+        Intent intent = new Intent(this, EnterTest.class);
+        startActivity(intent);
+    }
 
-        editor.putBoolean("cycle", cycle.isChecked());
-        editor.putBoolean("walk", walk.isChecked());
-        editor.putBoolean("cardio", cardio.isChecked());
-        editor.putBoolean("hometrainer", hometrainer.isChecked());
-        editor.putBoolean("jog", jog.isChecked());
-        editor.putBoolean("nordicWalking", nordicWalking.isChecked());
-        editor.putString("intensityType", intensityType);
-        editor.putString("intensityAmount", intensityAmount);
-        editor.putString("numberOfWorkouts", numberOfWorkouts);
-        editor.putBoolean("workoutSaved", true);
-        editor.apply();
-
-        Intent intent = new Intent(this, MyProfile.class);
+    public void changeProgram(View view) {
+        Intent intent = new Intent(this, EnterTrainingProgram.class);
         startActivity(intent);
     }
 }

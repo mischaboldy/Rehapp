@@ -14,10 +14,13 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 import android.provider.CalendarContract.Calendars;
 import android.provider.CalendarContract.Events;
 
+import com.mischaboldy.mischa.rehapp.InfoBoxHelper;
 import com.mischaboldy.mischa.rehapp.R;
 
 import java.util.Calendar;
@@ -82,6 +85,21 @@ public class MyCalendar extends AppCompatActivity {
         }
 
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_help, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if(item.getItemId() == R.id.help_button){
+            InfoBoxHelper.openBox(this, "myCalendar");
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void printCalendarIds() {

@@ -30,20 +30,16 @@ android:layout_height="match_parent">
                 android:textColor="@color/blueTop"
                 android:textSize="30sp" />
 
-            <Spinner
+            <TextView
+                android:id="@+id/subtitle_test_info_form_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/test_type_spinner"
-                android:entries="@array/test_type_spinner"/>
-
-
-            <EditText
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/colorPrimaryDark"
-                android:hint="@string/max_watt_edit_text"
-                android:id="@+id/max_watt_input_edit_text"
-                android:inputType="number" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/blueTop"
+                android:textSize="15sp"
+                android:text="Shuttle wandeltest"/>
 
             <EditText
                 android:layout_width="fill_parent"
@@ -53,83 +49,38 @@ android:layout_height="match_parent">
                 android:id="@+id/six_minute_meter_edit_text"
                 android:inputType="number" />
 
-            <EditText
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/colorPrimaryDark"
-                android:hint="@string/shuttle_level_edit_text"
-                android:id="@+id/shuttle_level_input_edit_text"
-                android:inputType="number" />
 
             <EditText
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorPrimaryDark"
-                android:hint="@string/speed_edit_text"
-                android:id="@+id/speed_edit_text"
-                android:inputType="number" />
-
-            <EditText
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/colorPrimaryDark"
-                android:hint="@string/MET_edit_text"
-                android:id="@+id/MET_input_edit_text"
+                android:hint="@string/heart_fq_rest_edit_text"
+                android:id="@+id/heart_fq_rest_input_edit_text"
                 android:inputType="numberDecimal" />
 
             <EditText
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorPrimaryDark"
-                android:hint="@string/vo2max_edit_text"
-                android:id="@+id/vo2max_edit_text"
-                android:inputType="number" />
+                android:hint="@string/heart_fq_max_edit_text"
+                android:id="@+id/heart_fq_max_input_edit_text"
+                android:inputType="numberDecimal" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:orientation="horizontal">
-
-                <SeekBar
-                    android:layout_width="175dp"
-                    android:layout_height="match_parent"
-                    android:id="@+id/borgschale_slider"
-                    android:paddingTop="40dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="2"/>
-
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:id="@+id/borg_value_text_view"
-                    android:textAlignment="center"
-                    android:paddingTop="30dp"
-                    android:text="6"
-                    android:textColor="@color/blueTop"
-                    android:textSize="45sp"
-                    android:layout_weight="4"/>
-
-                <ImageView
-                    android:layout_width="75dp"
-                    android:layout_height="match_parent"
-                    android:paddingTop="10dp"
-                    android:paddingRight="20dp"
-                    android:id="@+id/borg_value_image_view"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="2" />
-
-            </LinearLayout>
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:hint="@string/heart_fq_rec_edit_text"
+                android:id="@+id/heart_fq_rec_input_edit_text"
+                android:inputType="numberDecimal" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:background="@color/blueTop"
                 android:layout_marginTop="20dp"
-                android:paddingLeft="70dp"
-                android:paddingRight="70dp"
-                android:text="@string/save_trainings_info_button_text"
+                android:text="@string/save_test_info_button_text"
                 android:onClick="saveTest"
                 android:id="@+id/save_test_button"
                 android:textColor="#fff" />

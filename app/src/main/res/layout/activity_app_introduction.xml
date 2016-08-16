@@ -29,130 +29,30 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
             android:textAlignment="center"
-            android:text="@string/app_introduction"
+            android:textSize="16sp"
+            android:text="@string/app_introduction_pt1"
             android:layout_weight="0"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_marginTop="5dp"
-            android:textSize="20sp"
-            android:textColor="@color/blueTop"
-            android:text="Mijn Profiel"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="Info knop voorbeeld"
+            android:src="@drawable/info_icon"
+            android:layout_gravity="center" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
             android:textAlignment="center"
-            android:text="@string/app_introduction_text_1"
-            android:layout_weight="0"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_marginTop="5dp"
-            android:textSize="20sp"
-            android:textColor="@color/blueTop"
-            android:text="Mijn medailles"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:textAlignment="center"
-            android:text="@string/app_introduction_text_2"
-            android:layout_weight="0"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_marginTop="5dp"
-            android:textSize="20sp"
-            android:textColor="@color/blueTop"
-            android:text="Instellingen"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:textAlignment="center"
-            android:text="@string/app_introduction_text_3"
-            android:layout_weight="0"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_marginTop="5dp"
-            android:textSize="20sp"
-            android:textColor="@color/blueTop"
-            android:text="Mijn workouts"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:textAlignment="center"
-            android:text="@string/app_introduction_text_4"
-            android:layout_weight="0"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_marginTop="5dp"
-            android:textSize="20sp"
-            android:textColor="@color/blueTop"
-            android:text="Extra informatie"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:textAlignment="center"
-            android:text="@string/app_introduction_text_5"
-            android:layout_weight="0"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_marginTop="5dp"
-            android:textSize="20sp"
-            android:textColor="@color/blueTop"
-            android:text="Help"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:textAlignment="center"
-            android:text="@string/app_introduction_text_6"
+            android:textSize="16sp"
+            android:text="@string/app_introduction_pt2"
             android:layout_weight="0"/>
 
         <LinearLayout
@@ -164,13 +64,11 @@
 
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:background="@color/blueTop"
                 android:layout_marginTop="20dp"
-                android:paddingLeft="70dp"
-                android:paddingRight="70dp"
                 android:layout_marginBottom="5dp"
                 android:text="Beginnen met Rehapp"
                 android:id="@+id/save_training_button"

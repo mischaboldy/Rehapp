@@ -33,7 +33,7 @@ public class AppIntroduction extends AppCompatActivity {
 
 
     public void startRehapp(View view) {
-        Intent intent = new Intent(this, MainMenu.class);
+        Intent intent = new Intent(this, MainView.class);
         startActivity(intent);
     }
 }

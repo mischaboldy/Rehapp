@@ -190,7 +190,7 @@
     </LinearLayout>
 
     <Button
-        android:layout_width="250dp"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
         android:background="@color/blueTop"
