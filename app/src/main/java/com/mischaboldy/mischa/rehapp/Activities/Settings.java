@@ -53,55 +53,6 @@ public class Settings extends AppCompatActivity {
         {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.settings);
-//            Preference removeMedalsButton = findPreference("removeMedals");
-//            removeMedalsButton.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-//                @Override
-//                public boolean onPreferenceClick(Preference preference) {
-//                    Toast.makeText(getActivity(),"Medailles verwijderd",Toast.LENGTH_SHORT).show();
-//                    removeMedals(getActivity());
-//                    return true;
-//                }
-//            });
-//
-//            Preference removeWorkoutsButton = findPreference("removeWorkouts");
-//            removeWorkoutsButton.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-//                @Override
-//                public boolean onPreferenceClick(Preference preference) {
-//                    Toast.makeText(getActivity(),"Workouts verwijderd",Toast.LENGTH_SHORT).show();
-//                    removeWorkouts(getActivity());
-//                    return true;
-//                }
-//            });
-//
-//            Preference removeProfileButton = findPreference("removeProfile");
-//            removeProfileButton.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-//                @Override
-//                public boolean onPreferenceClick(Preference preference) {
-//                    Toast.makeText(getActivity(),"Profiel verwijderd",Toast.LENGTH_SHORT).show();
-//                    removeProfile(getActivity());
-//                    return true;
-//                }
-//            });
-//
-//            Preference removeTrainingButton = findPreference("removeTraining");
-//            removeTrainingButton.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-//                @Override
-//                public boolean onPreferenceClick(Preference preference) {
-//                    Toast.makeText(getActivity(),"Trainingen verwijderd",Toast.LENGTH_SHORT).show();
-//                    removeTraining(getActivity());
-//                    return true;
-//                }
-//            });
-//
-//            Preference removeTestButton = findPreference("removeTests");
-//            removeTestButton.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-//                @Override
-//                public boolean onPreferenceClick(Preference preference) {
-//                    Toast.makeText(getActivity(),"Tests verwijderd",Toast.LENGTH_SHORT).show();
-//                    removeTests(getActivity());
-//                    return true;
-//                }
-//            });
         }
     }
 
@@ -118,25 +69,5 @@ public class Settings extends AppCompatActivity {
             InfoBoxHelper.openBox(this, "settings");
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    public static void removeMedals(Context context){ ExperienceTracker.removeExperience(context); }
-
-    public static void removeWorkouts(Context context){ DatabaseHelper.clearTable(context, "workouts"); }
-
-    public static void removeTraining(Context context){ DatabaseHelper.clearTable(context, "training"); }
-
-    public static void removeTests(Context context){ DatabaseHelper.clearTable(context, "test"); }
-
-    public static void removeProfile(Context context){
-        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString("name", "");
-        editor.putString("userName", "");
-        editor.putString("dob", "");
-        editor.putString("height", "");
-        editor.putString("weight", "");
-        editor.putString("sex", "male");
-        editor.apply();
     }
 }

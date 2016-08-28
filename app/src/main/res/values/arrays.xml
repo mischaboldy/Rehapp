@@ -23,17 +23,6 @@
         <item>6 keer per week</item>
         <item>7 keer per week</item>
     </string-array>
-
-    <string-array name="workout_duration_spinner">
-        <item>15 minuten</item>
-        <item>30 minuten</item>
-        <item>45 minuten</item>
-        <item>60 minuten</item>
-        <item>1uur &amp; 15 minuten</item>
-        <item>1uur &amp; 30 minuten</item>
-        <item>1uur &amp; 45 minuten</item>
-        <item>1uur &amp; 60 minuten</item>
-    </string-array>
     
     <string-array name="sex_options">
         <item>man</item>
@@ -43,29 +32,6 @@
     <string-array name="sex_values">
         <item>man</item>
         <item>vrouw</item>
-    </string-array>
-
-    <integer-array name="workout_duration_spinner_values">
-        <item>15</item>
-        <item>30</item>
-        <item>45</item>
-        <item>60</item>
-        <item>75</item>
-        <item>90</item>
-        <item>105</item>
-        <item>120</item>
-    </integer-array>
-
-    <string-array name="listArray">
-        <item>Headings</item>
-        <item>Headings and Details</item>
-        <item>All Data</item>
-    </string-array>
-
-    <string-array name="listValues">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
     </string-array>
 
     <string-array name="MenuItems">
