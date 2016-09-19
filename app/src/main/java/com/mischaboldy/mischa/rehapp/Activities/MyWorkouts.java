@@ -15,7 +15,6 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.mischaboldy.mischa.rehapp.ExperienceTracker;
 import com.mischaboldy.mischa.rehapp.InfoBoxHelper;
 import com.mischaboldy.mischa.rehapp.ListViewAdapters.WorkoutListViewAdapter;
 import com.mischaboldy.mischa.rehapp.R;
@@ -43,18 +42,6 @@ public class MyWorkouts extends AppCompatActivity{
         appTitle.setText(R.string.my_workouts_title);
         Typeface titleTypeFace = Typeface.createFromAsset(getAssets(), "fonts/KeepCalm-Medium.ttf");
         appTitle.setTypeface(titleTypeFace);
-
-
-        Bundle extras = getIntent().getExtras();
-        Boolean fromWorkout;
-        if(extras != null){
-            fromWorkout = extras.getBoolean("WORKOUTADDED");
-            if(fromWorkout == true){
-                ExperienceTracker.addExperience(this, 22, "WorkoutExperience");
-                ExperienceTracker.addExperience(this, 13, "ScheduleExperience");
-
-            }
-        }
 
         ArrayList<String> workouts = getWorkouts();
 

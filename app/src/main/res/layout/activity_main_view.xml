@@ -24,12 +24,19 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <com.github.mikephil.charting.charts.LineChart
-                    android:id="@+id/chart"
-                    android:layout_margin="20dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                <ImageView
+                    android:layout_width="400dp"
+                    android:layout_height="300dp"
+                    android:paddingRight="20dp"
+                    android:src="@drawable/chart_1"
+                    android:layout_gravity="center_horizontal"/>
 
+                <ImageView
+                    android:layout_width="400dp"
+                    android:layout_height="300dp"
+                    android:paddingRight="20dp"
+                    android:src="@drawable/chart_2"
+                    android:layout_gravity="center_horizontal"/>
             </LinearLayout>
 
         <ListView

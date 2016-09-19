@@ -24,19 +24,19 @@ import com.mischaboldy.mischa.rehapp.R;
  */
 public class RegisterWorkout extends AppCompatActivity {
 
-    Button butnstart;
-    TextView time;
-    long starttime = 0L;
-    long timeInMilliseconds = 0L;
-    long timeSwapBuff = 0L;
-    long updatedtime = 0L;
-    int t = 1;
-    int secs = 0;
-    int mins = 0;
-    int milliseconds = 0;
-    Handler handler = new Handler();
-    String Workout;
-    String BorgValueStart;
+    private Button butnstart;
+    private TextView time;
+    private long starttime = 0L;
+    private long timeInMilliseconds = 0L;
+    private long timeSwapBuff = 0L;
+    private long updatedtime = 0L;
+    private int t = 1;
+    private int secs = 0;
+    private int mins = 0;
+    private int milliseconds = 0;
+    private Handler handler = new Handler();
+    private String Workout;
+    private String BorgValueStart;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

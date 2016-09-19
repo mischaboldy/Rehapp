@@ -25,9 +25,9 @@ import com.mischaboldy.mischa.rehapp.R;
  */
 public class EnterWorkout extends AppCompatActivity {
 
-    SQLiteDatabase rehappDB = null;
-    String selectedWorkout;
-    Integer borgValue = 1;
+    private SQLiteDatabase rehappDB = null;
+    private String selectedWorkout;
+    private int borgValue = 1;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

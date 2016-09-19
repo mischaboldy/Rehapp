@@ -21,8 +21,8 @@ import com.mischaboldy.mischa.rehapp.R;
  */
 public class SuggestTrainingProgram extends AppCompatActivity {
 
-    String chosenProgram = "";
-    public static final String PREFS_NAME = "TrainingProgramPrefsFile";
+    private String chosenProgram = "";
+    private static final String PREFS_NAME = "TrainingProgramPrefsFile";
 
 
     @Override

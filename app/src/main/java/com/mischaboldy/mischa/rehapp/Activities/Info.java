@@ -11,7 +11,6 @@ import android.widget.ExpandableListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mischaboldy.mischa.rehapp.ExperienceTracker;
 import com.mischaboldy.mischa.rehapp.InfoBoxHelper;
 import com.mischaboldy.mischa.rehapp.ListViewAdapters.ExpandableListAdapter;
 import com.mischaboldy.mischa.rehapp.R;
@@ -26,17 +25,15 @@ import java.util.List;
 public class Info extends AppCompatActivity {
 
 
-    ExpandableListAdapter listAdapter;
-    ExpandableListView expListView;
-    List<String> listDataHeader;
-    HashMap<String, List<String>> listDataChild;
+    private ExpandableListAdapter listAdapter;
+    private ExpandableListView expListView;
+    private List<String> listDataHeader;
+    private HashMap<String, List<String>> listDataChild;
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
-
-//        ExperienceTracker.trackAchievement(this, "info");
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

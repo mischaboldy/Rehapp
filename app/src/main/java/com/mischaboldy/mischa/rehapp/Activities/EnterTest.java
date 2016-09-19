@@ -13,7 +13,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mischaboldy.mischa.rehapp.ExperienceTracker;
 import com.mischaboldy.mischa.rehapp.DatabaseHelper;
 import com.mischaboldy.mischa.rehapp.R;
 
@@ -22,21 +21,21 @@ import com.mischaboldy.mischa.rehapp.R;
  */
 public class EnterTest extends AppCompatActivity {
 
-    SQLiteDatabase rehappDB;
-    EditText meterEditText;
-    EditText heartFqRestEditText;
-    EditText heartFqMaxEditText;
-    EditText heartFqRecEditText;
+    private SQLiteDatabase rehappDB;
+    private EditText meterEditText;
+    private EditText heartFqRestEditText;
+    private EditText heartFqMaxEditText;
+    private EditText heartFqRecEditText;
 
-    String meter;
-    String heartFqRest;
-    String heartFqMax;
-    String heartFqRec;
+    private String meter;
+    private String heartFqRest;
+    private String heartFqMax;
+    private String heartFqRec;
 
-    Integer meterInt;
-    Integer heartFqRestInt;
-    Integer heartFqMaxInt;
-    Integer heartFqRecInt;
+    private Integer meterInt;
+    private Integer heartFqRestInt;
+    private Integer heartFqMaxInt;
+    private Integer heartFqRecInt;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -81,7 +80,6 @@ public class EnterTest extends AppCompatActivity {
         }else{
             saveTestToDatabase();
         }
-
     }
 
     private void saveTestToDatabase() {
@@ -96,7 +94,6 @@ public class EnterTest extends AppCompatActivity {
         DatabaseHelper.insertIntoDatabase(queryString);
 
         Toast.makeText(this, "Testgegevens opgeslagen", Toast.LENGTH_LONG).show();
-//        ExperienceTracker.trackAchievement(this, "test");
 
         Intent intent = new Intent(this, SuggestTrainingProgram.class);
         startActivity(intent);

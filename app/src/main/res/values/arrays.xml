@@ -37,7 +37,8 @@
     <string-array name="MenuItems">
         <item>Overzicht</item>
         <item>Mijn profiel</item>
-        <item>Mijn niveau</item>
+        <item>Doelen</item>
+        <item>Maatjes</item>
         <item>Mijn workouts</item>
         <item>Agenda</item>
         <item>Trainingsprogramma</item>

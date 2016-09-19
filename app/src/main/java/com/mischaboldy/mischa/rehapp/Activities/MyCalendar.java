@@ -51,11 +51,11 @@ public class MyCalendar extends AppCompatActivity {
         appTitle.setText(R.string.my_calendar_title);
         Typeface titleTypeFace = Typeface.createFromAsset(getAssets(), "fonts/KeepCalm-Medium.ttf");
         appTitle.setTypeface(titleTypeFace);
-
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_CALENDAR) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions( this, new String[] {  Manifest.permission.READ_CALENDAR  },
-                    MY_PERMISSIONS_REQUEST_READ_CALENDAR);
-        }else{
+//
+//        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_CALENDAR) != PackageManager.PERMISSION_GRANTED) {
+//            ActivityCompat.requestPermissions( this, new String[] {  Manifest.permission.READ_CALENDAR  },
+//                    MY_PERMISSIONS_REQUEST_READ_CALENDAR);
+//        }else{
 
 //            long calID = 1;
 //            long startMillis = 0;
@@ -82,7 +82,7 @@ public class MyCalendar extends AppCompatActivity {
 //            long eventID = Long.parseLong(uri2.getLastPathSegment());
 
 //            printCalendarIds();
-        }
+//        }
 
 
     }

@@ -23,8 +23,6 @@ import java.util.ArrayList;
 
 public class TrainingProgram extends AppCompatActivity {
 
-//    public static final String PREFS_NAME = "TrainingProgramPrefsFile";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
