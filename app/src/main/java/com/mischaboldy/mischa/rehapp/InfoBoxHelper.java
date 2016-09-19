@@ -21,7 +21,13 @@ public class InfoBoxHelper {
             case "myProfile":
                 message = "Dit is uw profiel. Hier kunt u uw persoonlijke gegevens invullen. Deze gegevens heeft Rehapp nodig om zaken zoals uw normaalwaarden te berekenen. Vult u deze daarom alstublieft in.";
                 break;
-            case "myLevel":
+            case "goals":
+                message = "test";
+                break;
+            case "setGoals":
+                message = "test";
+                break;
+            case "Buddies":
                 message = "test";
                 break;
             case "myWorkouts":
@@ -49,6 +55,9 @@ public class InfoBoxHelper {
                 message = "test";
                 break;
             case "help":
+                message = "test";
+                break;
+            case "ViewBuddies":
                 message = "test";
                 break;
         }

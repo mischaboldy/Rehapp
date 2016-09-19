@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Huidig doel"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textColor="@color/blueTop"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/blueTop"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Doel kiezen"
+        android:id="@+id/choose_goal_button"
+        android:onClick="setGoal"
+        android:textColor="#fff" />
+
+    <ImageButton
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/current_goal_image_view"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        android:onClick="setGoal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gehaalde doelen"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textColor="@color/blueTop"
+        android:layout_gravity="center_horizontal"/>
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/goals_achieved"/>
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/blueTop"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Zelf doel bedenken"
+        android:id="@+id/create_goal_button"
+        android:onClick="createGoal"
+        android:textColor="#fff" />
+</LinearLayout>

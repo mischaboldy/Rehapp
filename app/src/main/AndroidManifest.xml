@@ -39,8 +39,17 @@
                 android:value=".Activities.MainView" />
         </activity>
         <activity
-            android:name=".Activities.MyLevel"
-            android:label="@string/my_level_title"
+            android:name=".Activities.Goals"
+            android:label="@string/goals_title"
+            android:parentActivityName=".Activities.MainView"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MainView" />
+        </activity>
+        <activity
+            android:name=".Activities.SetGoal"
+            android:label="@string/set_goal_title"
             android:parentActivityName=".Activities.MainView"
             android:theme="@style/AppTheme">
             <meta-data
@@ -127,7 +136,7 @@
         <activity
             android:name=".Activities.EnterTrainingProgram"
             android:label="@string/info_title"
-            android:parentActivityName=".Activities.MyLevel"
+            android:parentActivityName=".Activities.Goals"
             android:theme="@style/AppTheme"
             android:noHistory="true">
             <meta-data
@@ -163,6 +172,25 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Activities.RegisterWorkout" />
+        </activity>
+        <activity
+            android:name=".Activities.Buddies"
+            android:label="@string/buddy_title"
+            android:parentActivityName=".Activities.MainView"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MainView" />
+        </activity>
+        <activity
+            android:name=".Activities.ViewBuddies"
+            android:label="@string/view_buddies_title"
+            android:parentActivityName=".Activities.Buddies"
+            android:theme="@style/AppTheme"
+            android:noHistory="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.Buddies" />
         </activity>
     </application>
 </manifest>

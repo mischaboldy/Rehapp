@@ -13,7 +13,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mischaboldy.mischa.rehapp.ExperienceTracker;
 import com.mischaboldy.mischa.rehapp.DatabaseHelper;
 import com.mischaboldy.mischa.rehapp.R;
 
@@ -81,7 +80,6 @@ public class EnterTest extends AppCompatActivity {
         }else{
             saveTestToDatabase();
         }
-
     }
 
     private void saveTestToDatabase() {
@@ -96,7 +94,6 @@ public class EnterTest extends AppCompatActivity {
         DatabaseHelper.insertIntoDatabase(queryString);
 
         Toast.makeText(this, "Testgegevens opgeslagen", Toast.LENGTH_LONG).show();
-//        ExperienceTracker.trackAchievement(this, "test");
 
         Intent intent = new Intent(this, SuggestTrainingProgram.class);
         startActivity(intent);

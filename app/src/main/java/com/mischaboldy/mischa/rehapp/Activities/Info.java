@@ -11,7 +11,6 @@ import android.widget.ExpandableListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mischaboldy.mischa.rehapp.ExperienceTracker;
 import com.mischaboldy.mischa.rehapp.InfoBoxHelper;
 import com.mischaboldy.mischa.rehapp.ListViewAdapters.ExpandableListAdapter;
 import com.mischaboldy.mischa.rehapp.R;
@@ -35,8 +34,6 @@ public class Info extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
-
-//        ExperienceTracker.trackAchievement(this, "info");
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

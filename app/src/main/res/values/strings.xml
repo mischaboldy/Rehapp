@@ -117,4 +117,10 @@
     <string name="title_suggest_training_program">Programma voorstel</string>
     <string name="register_workout_title">Workout</string>
     <string name="save_workout_title">Workout</string>
+    <string name="goals_title">Doelen</string>
+    <string name="create_goal_title">Doel maken</string>
+    <string name="set_goal_title">Doel kiezen</string>
+    <string name="create_goals_title">Doel samenstellen</string>
+    <string name="buddy_title">Maatje</string>
+    <string name="view_buddies_title">Maatjes</string>
 </resources>
