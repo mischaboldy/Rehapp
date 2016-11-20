@@ -19,7 +19,7 @@ import com.mischaboldy.mischa.rehapp.R;
 
 public class EnterTrainingProgram extends AppCompatActivity {
 
-    public static final String PREFS_NAME = "TrainingProgramPrefsFile";
+    private static final String PREFS_NAME = "TrainingProgramPrefsFile";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -21,21 +21,21 @@ import com.mischaboldy.mischa.rehapp.R;
  */
 public class EnterTest extends AppCompatActivity {
 
-    SQLiteDatabase rehappDB;
-    EditText meterEditText;
-    EditText heartFqRestEditText;
-    EditText heartFqMaxEditText;
-    EditText heartFqRecEditText;
+    private SQLiteDatabase rehappDB;
+    private EditText meterEditText;
+    private EditText heartFqRestEditText;
+    private EditText heartFqMaxEditText;
+    private EditText heartFqRecEditText;
 
-    String meter;
-    String heartFqRest;
-    String heartFqMax;
-    String heartFqRec;
+    private String meter;
+    private String heartFqRest;
+    private String heartFqMax;
+    private String heartFqRec;
 
-    Integer meterInt;
-    Integer heartFqRestInt;
-    Integer heartFqMaxInt;
-    Integer heartFqRecInt;
+    private Integer meterInt;
+    private Integer heartFqRestInt;
+    private Integer heartFqMaxInt;
+    private Integer heartFqRecInt;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

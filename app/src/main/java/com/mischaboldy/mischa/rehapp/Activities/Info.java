@@ -25,10 +25,10 @@ import java.util.List;
 public class Info extends AppCompatActivity {
 
 
-    ExpandableListAdapter listAdapter;
-    ExpandableListView expListView;
-    List<String> listDataHeader;
-    HashMap<String, List<String>> listDataChild;
+    private ExpandableListAdapter listAdapter;
+    private ExpandableListView expListView;
+    private List<String> listDataHeader;
+    private HashMap<String, List<String>> listDataChild;
 
 
     protected void onCreate(Bundle savedInstanceState) {

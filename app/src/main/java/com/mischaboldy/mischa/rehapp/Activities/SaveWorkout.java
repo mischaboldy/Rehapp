@@ -22,10 +22,10 @@ import com.mischaboldy.mischa.rehapp.R;
  */
 public class SaveWorkout extends AppCompatActivity {
 
-    String workout;
-    Integer workout_duration;
-    Integer borgValueStart;
-    Integer borgValueEnd = 1;
+    private String workout;
+    private Integer workout_duration;
+    private Integer borgValueStart;
+    private Integer borgValueEnd = 1;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

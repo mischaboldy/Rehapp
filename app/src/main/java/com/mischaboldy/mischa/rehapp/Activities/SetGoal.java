@@ -21,8 +21,9 @@ import com.mischaboldy.mischa.rehapp.R;
  * Created by mischa on 17/09/16.
  */
 public class SetGoal extends AppCompatActivity{
-    public static final String PREFS_NAME = "GoalsPrefsFile";
-    String goal_chosen = "goal_1_base";
+
+    private static final String PREFS_NAME = "GoalsPrefsFile";
+    private String goal_chosen = "goal_1_base";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

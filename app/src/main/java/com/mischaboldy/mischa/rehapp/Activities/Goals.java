@@ -22,8 +22,7 @@ import com.mischaboldy.mischa.rehapp.R;
  */
 public class Goals extends AppCompatActivity {
 
-    public static final String PREFS_NAME = "GoalsPrefsFile";
-
+    private static final String PREFS_NAME = "GoalsPrefsFile";
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
