@@ -16,49 +16,49 @@ public class InfoBoxHelper {
 
         switch (boxChoice) {
             case "mainView":
-                message = "test";
+                message = "Dit is het overzicht. In dit scherm kunt u statistieken bekijken over uw voortgang.";
                 break;
             case "myProfile":
                 message = "Dit is uw profiel. Hier kunt u uw persoonlijke gegevens invullen. Deze gegevens heeft Rehapp nodig om zaken zoals uw normaalwaarden te berekenen. Vult u deze daarom alstublieft in.";
                 break;
             case "goals":
-                message = "test";
+                message = "Dit zijn uw doelen. In dit overzicht kunt u uw huidige doel bekijke en uw behaalde doelen. Wilt u een doel toevoegen of aanpassen? Klik dan op uw huidige doel.";
                 break;
             case "setGoals":
-                message = "test";
+                message = "Hier kunt u uw doel vervangen of een nieuw doel selecteren. Klik op een doel om het te selecteren.";
                 break;
             case "Buddies":
-                message = "test";
+                message = "Hier kunt u op zoek naar een maatje bij u in de buurt. Vind moeiteloos lotgenoten om samen mee te bewegen.";
                 break;
             case "myWorkouts":
                 message = "Hier kunt u al uw workouts inkijken en nieuwe workouts invoeren. U kunt individuele workouts verwijderen door op het rode kruis in de bovenhoek te drukken.";
                 break;
             case "enterWorkout":
-                message = "test";
+                message = "Om een workout in te voeren moet u twee dingen selecteren: de gekozen workout en de borgscore op dit moment. Na de workout voert u opnieuw een borgscore in.";
                 break;
             case "saveWorkout":
-                message = "test";
+                message = "Wanneer u met uw workout begint drukt u op start. Wanneer u klaar bent zet u de timer stil en klikt u op workout opslaan.";
                 break;
             case "registerWorkout":
-                message = "test";
+                message = "Geef hier nu opnieuw een borscore op voor dit moment.";
                 break;
             case "myCalendar":
                 message = "Dit is uw agenda. Als u een trainingsprogramma hebt geselecteerd dan kan u hier zien wanneer u uw workouts staan ingepland. U kunt hier ook uw planning aanpassen als u dat wilt.";
                 break;
             case "trainingprogram":
-                message = "test";
+                message = "Hier kunt u een trainingsprogramma selecteren. Geef uw voorkeuren aan en klik op trainingsprogramma selecteren.";
                 break;
             case "settings":
-                message = "test";
+                message = "Hier kunt u algemene instellinge voor de applicatie aanpassen.";
                 break;
             case "info":
-                message = "test";
+                message = "In dit scherm kunt u extra informatie vinden. Klik op de verschillende balkjes om meer te lezen.";
                 break;
             case "help":
-                message = "test";
+                message = "Hier kunt u hulp vinden bij het gebruik van de applicatie. Klik op de verschillende balkjes om meer te lezen.";
                 break;
             case "ViewBuddies":
-                message = "test";
+                message = "Dit zijn uw maatjes.";
                 break;
         }
 
